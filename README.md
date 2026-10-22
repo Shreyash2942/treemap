@@ -2,8 +2,10 @@
 
 **A modular Python toolkit for Binary Search Trees and tree-based Maps.**
 
-> **Status:** Day 1 core implementation in progress  
-> **Language:** Python 3.11+  
+> **Status:** Day 1 complete — BST core implemented and tested
+>
+> **Language:** Python 3.11+
+>
 > **Development:** Four-day milestone project
 
 ## Overview
@@ -12,9 +14,17 @@
 
 The implementation emphasizes modularity, clear interfaces, automated tests, and reproducible benchmarks. **The initial BST is not self-balancing**: balance detection reports problems but does not perform rotations.
 
-## Features (planned)
+## Features
+
+Implemented for Day 1:
 
 - **BST:** Insert, search, delete, find minimum/maximum, and preserve the BST ordering invariant.
+- **Generic nodes:** Comparable keys, unrestricted values, and typed child references.
+- **Core validation:** 69 tests, including strict ancestor bounds, 50+ entries, and seeded mutations compared with a dictionary.
+- **Development setup:** Installable package, virtual environment, pytest, Ruff, and a runnable example.
+
+Planned for later milestones:
+
 - **Traversal:** In-order, pre-order, and post-order traversal with reproducible examples.
 - **TreeMap:** Store, retrieve, update, and remove key-value pairs using the BST.
 - **Balance analysis:** Calculate tree height and detect unbalanced subtrees.
@@ -165,9 +175,21 @@ After installation, run:
 python -m pytest -v
 python -m ruff check .
 python -m ruff format --check .
+
+# Run the Day 1 example
+python examples/demo.py
 ```
 
-Testing will cover empty and single-node trees; duplicate and missing keys; leaf, one-child, two-child, and root deletion; traversal outputs; balance detection; and BST ordering after mutations. Test datasets will include **at least 50 items**, with numeric and string keys tested in separate trees where necessary.
+Day 1 tests cover empty and single-node trees; duplicate and missing keys; leaf,
+one-child, two-child, and root deletion; minimum/maximum; and BST ordering after
+mutations. Datasets include **at least 50 items**, six key types tested in separate
+trees, heterogeneous values including `None`, trees beyond the recursion limit,
+and five seeded workloads of 400 mixed operations starting with 100 keys each.
+
+Validation passed with Python 3.14.4: **69 tests**, Ruff lint and format checks,
+dependency consistency, and the demo. Python 3.11 is the minimum supported syntax
+target; it has not been separately exercised in this environment. Traversal,
+TreeMap, and balance tests will arrive with those implementations.
 
 ## Performance evaluation
 
