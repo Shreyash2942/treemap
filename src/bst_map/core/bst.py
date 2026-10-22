@@ -5,7 +5,7 @@ from __future__ import annotations
 from typing import Generic
 
 from bst_map.core.node import K, TreeNode, V
-from bst_map.core.operations import delete_node
+from bst_map.core.operations import delete_node, maximum_node, minimum_node
 
 
 class BinarySearchTree(Generic[K, V]):
@@ -73,3 +73,11 @@ class BinarySearchTree(Generic[K, V]):
         self._root, removed_value = delete_node(self._root, key)
         self._size -= 1
         return removed_value
+
+    def minimum(self) -> TreeNode[K, V]:
+        """Return the smallest-key node; raise `ValueError` on an empty tree."""
+        return minimum_node(self._root)
+
+    def maximum(self) -> TreeNode[K, V]:
+        """Return the largest-key node; raise `ValueError` on an empty tree."""
+        return maximum_node(self._root)

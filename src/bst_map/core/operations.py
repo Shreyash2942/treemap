@@ -5,6 +5,26 @@ from __future__ import annotations
 from bst_map.core.node import K, TreeNode, V
 
 
+def minimum_node(root: TreeNode[K, V] | None) -> TreeNode[K, V]:
+    """Return the leftmost node; raise `ValueError` for an empty subtree."""
+    if root is None:
+        raise ValueError("minimum is undefined for an empty tree")
+    current = root
+    while current.left is not None:
+        current = current.left
+    return current
+
+
+def maximum_node(root: TreeNode[K, V] | None) -> TreeNode[K, V]:
+    """Return the rightmost node; raise `ValueError` for an empty subtree."""
+    if root is None:
+        raise ValueError("maximum is undefined for an empty tree")
+    current = root
+    while current.right is not None:
+        current = current.right
+    return current
+
+
 def delete_node(root: TreeNode[K, V] | None, key: K) -> tuple[TreeNode[K, V] | None, V]:
     """Remove key and return the new subtree root and original value.
 
