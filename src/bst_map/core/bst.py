@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Generic
 
 from bst_map.core.node import K, TreeNode, V
+from bst_map.core.operations import delete_node
 
 
 class BinarySearchTree(Generic[K, V]):
@@ -62,3 +63,13 @@ class BinarySearchTree(Generic[K, V]):
                 return current
             current = current.left if key < current.key else current.right
         return None
+
+    def delete(self, key: K) -> V:
+        """Remove key and return its old value; raise `KeyError` if absent.
+
+        Two-child deletion uses the in-order successor. A failed deletion
+        leaves the root and size unchanged.
+        """
+        self._root, removed_value = delete_node(self._root, key)
+        self._size -= 1
+        return removed_value
