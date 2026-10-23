@@ -2,7 +2,7 @@
 
 **A modular Python toolkit for Binary Search Trees and tree-based Maps.**
 
-> **Status:** Day 1 complete — BST core implemented and tested
+> **Status:** Days 1 and 2 complete — BST, traversals, balance analysis, and TreeMap
 >
 > **Language:** Python 3.11+
 >
@@ -16,25 +16,24 @@ The implementation emphasizes modularity, clear interfaces, automated tests, and
 
 ## Features
 
-Implemented for Day 1:
+Implemented through Day 2:
 
 - **BST:** Insert, search, delete, find minimum/maximum, and preserve the BST ordering invariant.
 - **Generic nodes:** Comparable keys, unrestricted values, and typed child references.
-- **Core validation:** 69 tests, including strict ancestor bounds, 50+ entries, and seeded mutations compared with a dictionary.
+- **Traversal:** Iterative in-order, pre-order, and post-order node iterators.
+- **TreeMap:** Complete key-value API with sorted collections and stored `None` support.
+- **Balance analysis:** Height, root balance factor, overall balance, and unbalanced node keys.
+- **Validation:** 140 tests, including strict ancestor bounds, 50+ entries, deep trees, and seeded mutations compared with a dictionary.
 - **Development setup:** Installable package, virtual environment, pytest, Ruff, and a runnable example.
 
 Planned for later milestones:
 
-- **Traversal:** In-order, pre-order, and post-order traversal with reproducible examples.
-- **TreeMap:** Store, retrieve, update, and remove key-value pairs using the BST.
-- **Balance analysis:** Calculate tree height and detect unbalanced subtrees.
 - **Visualization:** Render ASCII diagrams before and after tree modifications.
-- **Testing:** Exercise at least 50 items, multiple comparable key types, heterogeneous values, and edge cases.
 - **Benchmarking:** Compare search operations in a BST-backed Map and a list-backed Map.
 
 ## Technology
 
-Python 3.11+, Python standard library, `pytest`, `ruff`, and Git. Project configuration will use `pyproject.toml` and a `src/` package layout.
+Python 3.11+, Python standard library, `pytest`, `ruff`, and Git. Project configuration uses `pyproject.toml` and a `src/` package layout. Graphify is an optional analysis tool, separate from runtime and development dependencies.
 
 ## Planned repository structure
 
@@ -107,7 +106,7 @@ On Windows, activation is optional: use `.venv\Scripts\python.exe` in place of
 
 ## API
 
-Day 1 implements the BST API below. The TreeMap example describes a later milestone.
+The BST and TreeMap APIs below are implemented.
 
 ### Binary Search Tree
 
@@ -137,7 +136,16 @@ mapping.put("alpha", 15)  # Update an existing key
 
 assert mapping.get("alpha") == 15
 assert mapping.contains_key("beta")
-mapping.remove("beta")
+assert mapping.keys() == ["alpha", "beta"]
+assert mapping.values() == [15, 20]
+assert mapping.items() == [("alpha", 15), ("beta", 20)]
+assert mapping.remove("beta") == 20
+assert len(mapping) == 1
+
+mapping.put("optional", None)
+assert mapping.contains_key("optional")
+assert mapping.get("optional", "fallback") is None
+assert mapping.get("missing", "fallback") == "fallback"
 ```
 
 **Key policy:** Keys within a tree must have a stable total ordering with consistent equality and `<`; inserting an existing key updates its value without changing size. Do not use NaN keys or mutate stored keys. Values may have different types, including `None`.
@@ -148,6 +156,10 @@ for a missing key, so stored `None` values remain distinguishable from absence.
 `minimum` and `maximum` return nodes and raise `ValueError` on an empty tree.
 `len(tree)` counts distinct keys. See [architecture](docs/architecture.md) for
 the key contract, node-reference behavior, and operation complexity.
+
+**TreeMap results:** `put` returns `None`; `remove` returns the removed value
+and raises `KeyError` if absent. `keys`, `values`, and `items` return new lists,
+ordered by key, containing references to the stored keys and values.
 
 ## Traversal example
 
@@ -167,6 +179,27 @@ For insertion order `50, 30, 70, 20, 40, 60, 80`:
 | Pre-order | 50, 30, 20, 40, 70, 60, 80 |
 | Post-order | 20, 40, 30, 60, 80, 70, 50 |
 
+```python
+from bst_map.core import analyze_balance, inorder, postorder, preorder
+
+for traversal in [inorder, preorder, postorder]:
+    print([node.key for node in traversal(tree.root)])
+
+report = analyze_balance(tree.root)
+print(report.height, report.is_balanced, report.unbalanced_keys)
+```
+
+Each traversal accepts a subtree root, yields the actual nodes, and returns an
+empty iterator for `None`. The table describes the seven-node tree before
+deletion; after the BST example's `delete(30)`, output reflects that mutation.
+
+Height counts edges: empty tree **−1**, leaf **0**. Balance factor is
+`height(left) - height(right)`. `analyze_balance` returns the tree's height,
+root balance factor, overall `is_balanced`, and a tuple of unbalanced keys in
+post-order. It checks every subtree and performs no rotations. The convenience
+functions `height(root)`, `balance_factor(root)`, and `is_balanced(root)` are
+also available from `bst_map.core`.
+
 ## Tests and code quality
 
 After installation, run:
@@ -176,7 +209,7 @@ python -m pytest -v
 python -m ruff check .
 python -m ruff format --check .
 
-# Run the Day 1 example
+# Run the BST, traversal, balance, and TreeMap examples
 python examples/demo.py
 ```
 
@@ -186,10 +219,14 @@ mutations. Datasets include **at least 50 items**, six key types tested in separ
 trees, heterogeneous values including `None`, trees beyond the recursion limit,
 and five seeded workloads of 400 mixed operations starting with 100 keys each.
 
-Validation passed with Python 3.14.4: **69 tests**, Ruff lint and format checks,
+Day 2 adds traversal repeatability and node identity checks, every-subtree
+balance validation against breadth-first reference heights, sorted map
+collections, stored `None` and defaults, and three seeded TreeMap workloads.
+Traversal, balance, and map integration tests also exceed the recursion limit.
+
+Validation passed with Python 3.14.4: **140 tests**, Ruff lint and format checks,
 dependency consistency, and the demo. Python 3.11 is the minimum supported syntax
-target; it has not been separately exercised in this environment. Traversal,
-TreeMap, and balance tests will arrive with those implementations.
+target; it has not been separately exercised in this environment.
 
 ## Performance evaluation
 
@@ -207,11 +244,22 @@ Benchmarks will use repeatable datasets, multiple runs, and both successful and 
 
 Detailed planning and project evidence are maintained separately from this README:
 
-- [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — Day 1 tasks, quality gate, Git commit schedule, and remaining scope.
+- [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — Days 1 and 2 tasks, quality gates, Git commit schedules, and remaining scope.
 - [`docs/architecture.md`](docs/architecture.md) — module design and core interfaces.
 - `docs/performance_analysis.md` — benchmark methodology and findings *(planned)*.
 - `docs/evaluation.pdf` — two-page evaluation of when tree data structures are beneficial *(planned)*.
 - `docs/diagrams/` — before-and-after tree diagrams *(planned)*.
+
+## Project knowledge graph
+
+Graphify outputs are available in [`graphify-out/`](graphify-out/):
+
+- [`graph.html`](graphify-out/graph.html) — interactive architecture graph; open in a browser.
+- [`graph.json`](graphify-out/graph.json) — graph data with sources and confidence labels.
+- [`GRAPH_REPORT.md`](graphify-out/GRAPH_REPORT.md) — communities, cohesion, connections, and audit limitations.
+
+The graph is a snapshot of code and documentation, not a correctness proof.
+Graphify's token counters are unavailable here; no measured token cost is claimed.
 
 ## Completion criteria
 

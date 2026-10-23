@@ -1,6 +1,7 @@
-"""Run the Day 1 BST example with `python examples/demo.py` after installation."""
+"""Run the Day 1 and Day 2 examples with `python examples/demo.py`."""
 
-from bst_map import BinarySearchTree
+from bst_map import BinarySearchTree, TreeMap
+from bst_map.core import analyze_balance, inorder, postorder, preorder
 
 
 def main() -> None:
@@ -12,8 +13,27 @@ def main() -> None:
     print(f"Search 40: {found.value if found is not None else 'missing'}")
     print(f"Minimum key: {tree.minimum().key}")
     print(f"Maximum key: {tree.maximum().key}")
+    for traversal in [inorder, preorder, postorder]:
+        print(f"{traversal.__name__}: {[node.key for node in traversal(tree.root)]}")
+    report = analyze_balance(tree.root)
+    print(f"Height: {report.height}; balanced: {report.is_balanced}")
     print(f"Delete 30: {tree.delete(30)}")
     print(f"Remaining entries: {len(tree)}")
+
+    skewed = BinarySearchTree[int, None]()
+    for key in [1, 2, 3]:
+        skewed.insert(key, None)
+    print(f"Skewed tree: {analyze_balance(skewed.root)}")
+
+    mapping = TreeMap[str, int | None]()
+    mapping.put("beta", 20)
+    mapping.put("alpha", 10)
+    mapping.put("alpha", 15)
+    mapping.put("optional", None)
+    print(f"Sorted map: {mapping.items()}")
+    print(f"Stored None exists: {mapping.contains_key('optional')}")
+    print(f"Missing key default: {mapping.get('missing', 'fallback')}")
+    print(f"Remove beta: {mapping.remove('beta')}; size: {len(mapping)}")
 
 
 if __name__ == "__main__":

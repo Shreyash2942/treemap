@@ -23,6 +23,12 @@ dist/
 htmlcov/
 coverage.xml
 
+# Graphify extraction intermediates and local caches
+.graphify*
+!.graphifyignore
+graphify-out/.*
+graphify-out/cache/
+
 # Generated benchmark artifacts (retain the directory)
 results/*
 !results/.gitkeep

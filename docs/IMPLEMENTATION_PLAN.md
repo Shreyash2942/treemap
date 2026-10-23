@@ -45,9 +45,53 @@ Deep-tree cases exercise both ascending and descending insertion orders beyond
 the interpreter's recursion limit. The declared Python 3.11 minimum has not
 been separately exercised in this environment.
 
+## Day 2: Traversals, balance, and TreeMap (M2 complete)
+
+Implement three iterative traversals yielding nodes, analyze every subtree's
+height and balance, and expose a reusable BST-backed TreeMap with sorted lists
+of keys, values, and entries. Height counts edges: empty is -1 and a leaf is 0.
+
+Commit schedule:
+
+7. `feat: implement inorder traversal`
+8. `feat: add preorder and postorder traversals`
+9. `feat: implement tree balance detection`
+10. `feat: create BST-backed TreeMap`
+11. `feat: complete TreeMap key-value API`
+12. `test: verify traversals and TreeMap integration`
+
+M2 acceptance checklist:
+
+- [x] In-order, pre-order, and post-order match the README's example.
+- [x] Traversals handle empty and single-node trees with repeatable output.
+- [x] Height and balance factor use a documented, consistent convention.
+- [x] Balance analysis inspects all subtrees and reports unbalanced keys.
+- [x] TreeMap supports put/get/remove/contains, sorted collections, and length.
+- [x] Stored `None` values are distinct from absent keys and get defaults.
+- [x] Integration tests cover updates, all root deletion shapes, and 50+ entries.
+- [x] Iterative algorithms and TreeMap handle trees beyond the recursion limit.
+- [x] All tests, Ruff checks, dependency checks, and the expanded demo pass.
+- [x] Graphify HTML, JSON, and an honest audit report reflect Day 2.
+- [x] Six additional commits exist (twelve total).
+
+Validation on Python 3.14.4:
+
+| Check | Result |
+| --- | --- |
+| `python -m pytest -q` | 140 passed (69 Day 1 and 71 new Day 2 cases) |
+| `python -m ruff check .` | Passed |
+| `python -m ruff format --check .` | Passed |
+| `python -m pip check` | No broken requirements |
+| `python examples/demo.py` | Traversal orders, balanced/skewed reports, and TreeMap examples passed |
+
+Balance tests compare subtree heights with an independent breadth-first
+reference. Three seeded map workloads each start with 100 keys, then perform
+400 mixed operations checked against a dictionary and strict BST invariants.
+The graph report separates extracted/inferred links and discloses unavailable
+token counters. Graphify is installed separately from the project's `.venv`.
+
 ## Remaining project scope
 
-The README defines the remaining features: traversals, TreeMap and ListMap,
-height and balance analysis, ASCII rendering, reproducible search benchmarks,
-performance analysis, and a two-page evaluation. These are later milestones;
-their detailed daily schedules have not yet been supplied.
+The remaining features are ListMap, ASCII rendering, reproducible search
+benchmarks, performance analysis, and a two-page evaluation. These are later
+milestones; their detailed daily schedules have not yet been supplied.
