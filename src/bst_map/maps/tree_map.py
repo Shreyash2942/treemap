@@ -6,6 +6,7 @@ from typing import Generic, TypeVar, overload
 
 from bst_map.core.bst import BinarySearchTree
 from bst_map.core.node import K, V
+from bst_map.core.traversals import inorder
 
 D = TypeVar("D")
 
@@ -38,3 +39,23 @@ class TreeMap(Generic[K, V]):
         """Return the stored value, or default only when key is absent."""
         node = self._tree.search(key)
         return default if node is None else node.value
+
+    def remove(self, key: K) -> V:
+        """Remove an entry and return its value; raise `KeyError` if absent."""
+        return self._tree.delete(key)
+
+    def contains_key(self, key: K) -> bool:
+        """Return whether key exists, including entries whose value is `None`."""
+        return self._tree.search(key) is not None
+
+    def keys(self) -> list[K]:
+        """Return a new list of keys in sorted order in O(n) time."""
+        return [node.key for node in inorder(self._tree.root)]
+
+    def values(self) -> list[V]:
+        """Return a new list of values ordered by key, retaining value references."""
+        return [node.value for node in inorder(self._tree.root)]
+
+    def items(self) -> list[tuple[K, V]]:
+        """Return a new list of key-value tuples sorted by key in O(n) time."""
+        return [(node.key, node.value) for node in inorder(self._tree.root)]
