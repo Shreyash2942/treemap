@@ -2,6 +2,7 @@
 
 from bst_map import BinarySearchTree, TreeMap
 from bst_map.core import analyze_balance, inorder, postorder, preorder
+from bst_map.visualization import render_tree
 
 
 def main() -> None:
@@ -17,7 +18,11 @@ def main() -> None:
         print(f"{traversal.__name__}: {[node.key for node in traversal(tree.root)]}")
     report = analyze_balance(tree.root)
     print(f"Height: {report.height}; balanced: {report.is_balanced}")
+    print("Before deleting 30:")
+    print(render_tree(tree.root))
     print(f"Delete 30: {tree.delete(30)}")
+    print("After deleting 30 (successor 40):")
+    print(render_tree(tree.root))
     print(f"Remaining entries: {len(tree)}")
 
     skewed = BinarySearchTree[int, None]()
