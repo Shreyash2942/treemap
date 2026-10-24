@@ -2,6 +2,9 @@
 
 from __future__ import annotations
 
+import random
+from dataclasses import dataclass
+
 import pytest
 
 from bst_map import BinarySearchTree, TreeNode
@@ -40,3 +43,34 @@ def sample_tree() -> BinarySearchTree[int, str]:
     for key in [50, 30, 70, 20, 40, 60, 80]:
         tree.insert(key, f"value-{key}")
     return tree
+
+
+@dataclass(frozen=True)
+class MapDataset:
+    """Fresh entries for a named 50-operation scenario, with optional preload."""
+
+    name: str
+    entries: tuple[tuple[int | str, object], ...]
+    initial: tuple[tuple[int | str, object], ...] = ()
+
+
+@pytest.fixture(
+    params=["random_int", "sorted_int", "reverse_int", "string", "mixed_values", "updates"]
+)
+def fifty_item_dataset(request) -> MapDataset:
+    """Provide all six Day 3 datasets without sharing mutable values across tests."""
+    name = request.param
+    keys = list(range(50))
+    if name == "reverse_int":
+        keys.reverse()
+    elif name != "sorted_int":
+        random.Random(506).shuffle(keys)
+    if name == "string":
+        keys = [f"key-{key:02d}" for key in keys]
+    values = [42, "text", 3.5, [1, 2], {"nested": True}, False, None]
+    entries = tuple(
+        (key, values[index % len(values)] if name in {"mixed_values", "updates"} else index)
+        for index, key in enumerate(keys)
+    )
+    initial = tuple((key, "original") for key in keys) if name == "updates" else ()
+    return MapDataset(name, entries, initial)
