@@ -12,6 +12,54 @@ from bst_map import BinarySearchTree
 from bst_map.core.operations import delete_node, maximum_node, minimum_node
 
 
+@pytest.mark.parametrize("selection", ["root", "minimum", "maximum"])
+def test_repeated_deletions_to_empty_preserve_size_bounds_and_missing_behavior(selection):
+    keys = list(range(50))
+    random.Random(506).shuffle(keys)
+    tree = BinarySearchTree()
+    expected = {}
+    for key in keys:
+        tree.insert(key, None if key % 2 else str(key))
+        expected[key] = None if key % 2 else str(key)
+        assert_bst_valid(tree)
+    while expected:
+        if selection == "root":
+            key = tree.root.key
+        else:
+            key = getattr(tree, selection)().key
+        assert tree.delete(key) == expected.pop(key)
+        assert len(tree) == len(expected)
+        assert tree.search(key) is None
+        for _ in range(2):
+            with pytest.raises(KeyError) as error:
+                tree.delete(key)
+            assert error.value.args == (key,)
+            assert len(tree) == len(expected)
+            assert_bst_valid(tree)
+        if expected:
+            assert tree.minimum().key == min(expected)
+            assert tree.maximum().key == max(expected)
+    assert tree.root is None
+    tree.insert(100, "reused")
+    assert len(tree) == 1
+    assert tree.search(100).value == "reused"
+    assert_bst_valid(tree)
+
+
+def test_equal_numeric_keys_replace_without_creating_duplicate_nodes():
+    tree = BinarySearchTree()
+    tree.insert(1, "integer")
+    node = tree.search(1)
+    tree.insert(1.0, "float")
+    tree.insert(True, None)
+    assert len(tree) == 1
+    assert tree.search(1.0) is node
+    assert tree.search(True).value is None
+    assert_bst_valid(tree)
+    assert tree.delete(True) is None
+    assert len(tree) == 0
+
+
 def test_empty_tree_behavior():
     tree = BinarySearchTree()
     assert tree.root is None

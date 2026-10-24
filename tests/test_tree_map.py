@@ -12,6 +12,33 @@ from bst_map.maps import TreeMap as ExportedTreeMap
 from bst_map.maps.tree_map import TreeMap as ModuleTreeMap
 
 
+def test_fifty_missing_removals_do_not_change_existing_none_entries():
+    mapping = TreeMap()
+    for key in range(50):
+        mapping.put(key, None)
+    for key in range(50, 100):
+        with pytest.raises(KeyError) as error:
+            mapping.remove(key)
+        assert error.value.args == (key,)
+        assert len(mapping) == 50
+        assert mapping.items() == [(existing, None) for existing in range(50)]
+        assert_bst_valid(mapping._tree)
+
+
+def test_map_can_be_repeatedly_emptied_and_reused():
+    mapping = TreeMap()
+    for round_number in range(3):
+        for key in range(50):
+            mapping.put(key, (round_number, key))
+            assert_bst_valid(mapping._tree)
+        for key in reversed(range(50)):
+            assert mapping.remove(key) == (round_number, key)
+            assert len(mapping) == key
+            assert_bst_valid(mapping._tree)
+        assert mapping.keys() == mapping.values() == mapping.items() == []
+        assert mapping.get(0, "missing") == "missing"
+
+
 def test_map_exports_are_consistent():
     assert TreeMap is ExportedTreeMap is ModuleTreeMap
 
