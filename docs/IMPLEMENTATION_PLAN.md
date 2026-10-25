@@ -137,7 +137,32 @@ and two warmups. Median-first tree heights are 5/6/8/9; sorted heights are
 `docs/performance_analysis.md`. The graphify artifacts intentionally remain
 the labeled Day 2 snapshot; graph refresh is not part of M3 acceptance.
 
-## Remaining project scope
+## Day 4: Documentation, evaluation, and release (M4 complete)
 
-The two-page evaluation and final review remain. Their detailed daily schedule
-has not yet been supplied.
+19. `refactor: improve code quality and type hints`
+20. `docs: document architecture and traversal examples`
+21. `docs: complete performance analysis and evaluation`
+22. `test: complete final regression verification`
+23. `chore: finalize project submission package`
+
+M4 acceptance checklist:
+
+- [x] Strict mypy passes for the package/benchmarks; the typed wheel includes `py.typed`.
+- [x] README covers objectives, requirements, installation, structure, APIs, and reproduction.
+- [x] Architecture explains responsibilities, dependencies, ownership, and design decisions.
+- [x] Performance analysis uses final measured values and explains uncertainty and trade-offs.
+- [x] Evaluation contains third-person analysis, verified citations, and alphabetized references.
+- [x] PDF contains exactly two substantive pages including references and was visually inspected.
+- [x] All 213 tests pass with no failures/errors/skips; JUnit evidence is retained.
+- [x] Ruff lint/format, mypy, dependency checks, demo, and final benchmarks pass.
+- [x] Release checks reconstruct all 32 cases/288 raw samples and verify file hashes.
+- [x] Source ZIP, Git bundle, wheel/sdist, and checksum tooling are prepared.
+- [x] Five Day 4 commits complete the 23-commit sequence; lightweight tag `v1.0.0` identifies HEAD.
+
+Evidence is in `results/final_validation.json`, `results/pytest_results.xml`, and
+`docs/SUBMISSION.md`. Release archives are generated under ignored `dist/`
+after the final commit/tag, capturing the exact release and excluding caches.
+The Git bundle preserves history separately. No project milestones remain.
+
+Runtime checks use CPython 3.14.4; Python 3.11 is the syntax/type-check target.
+The historical Day 2 graph is a labeled supplement, not current release evidence.

@@ -2,7 +2,7 @@
 
 **A modular Python toolkit for Binary Search Trees and tree-based Maps.**
 
-> **Status:** v1.0.0 release candidate — final documentation and verification
+> **Status:** Complete — v1.0.0 release
 >
 > **Language:** Python 3.11+
 >
@@ -48,6 +48,7 @@ treemap/
 ├── src/
 │   └── bst_map/
 │       ├── __init__.py
+│       ├── py.typed
 │       ├── core/
 │       │   ├── __init__.py
 │       │   ├── node.py
@@ -72,6 +73,7 @@ treemap/
 │   ├── test_list_map.py
 │   ├── test_tree_renderer.py
 │   ├── test_benchmark_search.py
+│   ├── test_submission.py
 │   └── test_edge_cases.py
 ├── benchmarks/
 │   └── benchmark_search.py
@@ -266,6 +268,9 @@ Benchmark tests validate workloads and statistics without asserting a speed thre
 Both `pytest` and `python -m pytest` are supported. The committed
 [JUnit report](results/pytest_results.xml) records the full run. Python 3.11 is
 the syntax/type-check target; runtime verification uses Python 3.14.4.
+Final verification passed **213 tests**, strict mypy, Ruff lint/format, dependency
+checks, the demo, the two-page PDF check, and reconstruction of all benchmark
+statistics. See [release validation](results/final_validation.json).
 
 ## Performance evaluation
 
@@ -278,6 +283,8 @@ batch, two warmups, and fixed seed 506. Construction is outside timing.
 python benchmarks/benchmark_search.py
 # Without the optional plotting dependency:
 python benchmarks/benchmark_search.py --no-chart
+# Preserve the published snapshot when measuring again:
+python benchmarks/benchmark_search.py --output results/reproduced
 ```
 
 The results are per-lookup batch averages, not individual-operation latency
@@ -328,6 +335,7 @@ Detailed planning and project evidence are maintained separately from this READM
 - [`docs/performance_analysis.md`](docs/performance_analysis.md) — executed benchmark methodology, results, and limits.
 - [`docs/evaluation.pdf`](docs/evaluation.pdf) — two-page academic evaluation, including APA-style citations and references.
 - [`docs/evaluation.md`](docs/evaluation.md) — editable evaluation source.
+- [`docs/SUBMISSION.md`](docs/SUBMISSION.md) — validation and release-artifact guide.
 - [`docs/diagrams/`](docs/diagrams/) — reproducible before-and-after tree diagrams.
 
 ## Project knowledge graph
@@ -345,7 +353,9 @@ Graphify's token counters are unavailable here; no measured token cost is claime
 
 ## Completion criteria
 
-The project is complete when BST operations preserve ordering; all traversals produce expected output; the Map stores and retrieves entries correctly; minimum/maximum and deletion handle edge cases; balance detection works; the 50+ item tests pass; diagrams and reproducible benchmarks are available; and the two-page evaluation is finished.
+All requirements are implemented and mapped to evidence in the
+[requirements matrix](docs/requirements.md). The final repository has 23
+milestone commits and the lightweight release tag `v1.0.0`.
 
 ## Rebuild documentation and prepare a submission
 

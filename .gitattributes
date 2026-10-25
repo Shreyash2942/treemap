@@ -1,2 +1,4 @@
 # Retain measured CSV bytes and recognize their standard CRLF row terminators.
 results/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Preserve measured Python source bytes in checkouts and Git archives on Windows.
+*.py text eol=lf

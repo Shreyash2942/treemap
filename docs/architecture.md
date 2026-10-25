@@ -180,7 +180,7 @@ The summary CSV reports the median of batch means, minimum, maximum, and IQR.
 Raw CSV retains query counts and total elapsed nanoseconds so every statistic
 can be reconstructed. Metadata records interpreter/platform, timer, configuration,
 Git revision, and SHA-256 source/result hashes. `.gitattributes` preserves exact
-CSV bytes across Git checkout. Plotting is optional via the `benchmark` extra;
+CSV bytes and LF Python source across checkouts/archives. Plotting is optional via the `benchmark` extra;
 Matplotlib is imported only when creating the PNG. Neither map needs it at runtime.
 
 The full run and constraints are documented in `performance_analysis.md`.

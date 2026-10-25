@@ -1,5 +1,5 @@
 {
-  "validated_at_utc": "2026-10-25T16:39:38.762791+00:00",
+  "validated_at_utc": "2026-10-25T16:42:40.071197+00:00",
   "passed": true,
   "version": "1.0.0",
   "validation_python": "3.14.4",
@@ -17,7 +17,7 @@
     "hashes_verified": true,
     "all_statistics_reconstructed": true
   },
-  "local_links_checked": 36,
+  "local_links_checked": 48,
   "required_files_checked": 14,
   "regression_tests": 213
 }
