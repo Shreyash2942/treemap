@@ -4,8 +4,8 @@ import random
 
 from conftest import assert_bst_valid
 
-from bst_map import BinarySearchTree, TreeMap
-from bst_map.core import analyze_balance, inorder, postorder, preorder
+from treemap import BinarySearchTree, TreeMap
+from treemap.core import analyze_balance, inorder, postorder, preorder
 
 
 def test_bst_dataset_preserves_entries_and_invariants_after_every_mutation(fifty_item_dataset):

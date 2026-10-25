@@ -1,8 +1,8 @@
-# Treemap
+# TreeMap
 
 **A modular Python toolkit for Binary Search Trees and tree-based Maps.**
 
-> **Status:** Complete — v1.0.1 release
+> **Status:** Complete — v1.0.2 release
 >
 > **Language:** Python 3.11+
 >
@@ -10,7 +10,7 @@
 
 ## Overview
 
-**Treemap** is an educational software engineering project that implements a Binary Search Tree (BST) and a Map backed by that tree. It demonstrates ordered key-value storage, tree manipulation, traversal, balance detection, visualization, and search-performance analysis. The repository directory is `treemap`; Python imports use `bst_map`.
+**TreeMap** is an educational software engineering project that implements a Binary Search Tree (BST) and a Map backed by that tree. It demonstrates ordered key-value storage, tree manipulation, traversal, balance detection, visualization, and search-performance analysis. The repository directory is `treemap`; Python imports use `treemap`.
 
 The implementation emphasizes modularity, clear interfaces, automated tests, and reproducible benchmarks. **The initial BST is not self-balancing**: balance detection reports problems but does not perform rotations.
 
@@ -30,7 +30,7 @@ Implemented features:
 - **Development setup:** Installable package, virtual environment, pytest, Ruff, and a runnable example.
 
 The [two-page evaluation](docs/evaluation.pdf), [editable source](docs/evaluation.md),
-and [requirements matrix](docs/requirements.md) accompany the implementation.
+and [requirements matrix](docs/REQUIREMENTS.md) accompany the implementation.
 
 ## Technology
 
@@ -46,7 +46,7 @@ Graphify is an optional, separate analysis tool.
 ```text
 treemap/
 ├── src/
-│   └── bst_map/
+│   └── treemap/
 │       ├── __init__.py
 │       ├── py.typed
 │       ├── core/
@@ -138,7 +138,7 @@ The BST and TreeMap APIs below are implemented.
 ### Binary Search Tree
 
 ```python
-from bst_map.core.bst import BinarySearchTree
+from treemap.core.bst import BinarySearchTree
 
 tree = BinarySearchTree()
 for key in [50, 30, 70, 20, 40, 60, 80]:
@@ -154,7 +154,7 @@ assert len(tree) == 6
 ### TreeMap
 
 ```python
-from bst_map.maps.tree_map import TreeMap
+from treemap.maps.tree_map import TreeMap
 
 mapping = TreeMap()
 mapping.put("alpha", 10)
@@ -191,7 +191,7 @@ ordered by key, containing references to the stored keys and values.
 rendering. The property cannot be assigned; callers must also leave node keys
 and child links unchanged. The public package includes a `py.typed` marker.
 
-`ListMap` is available from `bst_map` or `bst_map.maps.list_map`. It offers the
+`ListMap` is available from `treemap` or `treemap.maps.list_map`. It offers the
 same methods for valid, mutually comparable keys, storing entries in a list
 and scanning sequentially. Lookup/update/removal are O(n); sorted collections
 are O(n log n). TreeMap operations depend on tree height. Both retain stored
@@ -216,8 +216,8 @@ For insertion order `50, 30, 70, 20, 40, 60, 80`:
 | Post-order | 20, 40, 30, 60, 80, 70, 50 |
 
 ```python
-from bst_map import BinarySearchTree
-from bst_map.core import analyze_balance, inorder, postorder, preorder
+from treemap import BinarySearchTree
+from treemap.core import analyze_balance, inorder, postorder, preorder
 
 tree = BinarySearchTree()
 for key in [50, 30, 70, 20, 40, 60, 80]:
@@ -241,7 +241,7 @@ Height counts edges: empty tree **−1**, leaf **0**. Balance factor is
 root balance factor, overall `is_balanced`, and a tuple of unbalanced keys in
 post-order. It checks every subtree and performs no rotations. The convenience
 functions `height(root)`, `balance_factor(root)`, and `is_balanced(root)` are
-also available from `bst_map.core`.
+also available from `treemap.core`.
 
 ## Tests and code quality
 
@@ -314,7 +314,7 @@ not a universal speed advantage or proof of asymptotic complexity.
 ## Reproducible tree diagrams
 
 ```python
-from bst_map.visualization import render_tree
+from treemap.visualization import render_tree
 
 print(render_tree(tree.root))
 print(render_tree(tree.root, show_values=True))
@@ -330,7 +330,7 @@ example [before deletion](docs/diagrams/tree_before.txt) and
 Detailed planning and project evidence are maintained separately from this README:
 
 - [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — four-day tasks, quality gates, and commit schedules.
-- [`docs/requirements.md`](docs/requirements.md) — requirement-to-evidence traceability.
+- [`docs/REQUIREMENTS.md`](docs/REQUIREMENTS.md) — requirement-to-evidence traceability.
 - [`docs/architecture.md`](docs/architecture.md) — module design and core interfaces.
 - [`docs/performance_analysis.md`](docs/performance_analysis.md) — executed benchmark methodology, results, and limits.
 - [`docs/evaluation.pdf`](docs/evaluation.pdf) — two-page academic evaluation, including APA-style citations and references.
@@ -349,14 +349,14 @@ Graphify outputs are available in [`graphify-out/`](graphify-out/):
 The checked-in graph is the **Day 2 snapshot**, before ListMap, the renderer,
 and the benchmark were implemented. It is not a current Day 3 architecture graph
 or a correctness proof; re-run graphify to refresh it.
-Graph labels use the current project name; the Day 2 relationships are unchanged.
+Graph labels and paths use the current project and package names; the Day 2 relationships are unchanged.
 Graphify's token counters are unavailable here; no measured token cost is claimed.
 
 ## Completion criteria
 
 All requirements are implemented and mapped to evidence in the
-[requirements matrix](docs/requirements.md). The final repository has 23
-milestone commits plus a naming correction, with the lightweight release tag `v1.0.1`.
+[requirements matrix](docs/REQUIREMENTS.md). The final repository has 23
+milestone commits plus submission corrections, with the lightweight release tag `v1.0.2`.
 
 ## Rebuild documentation and prepare a submission
 
@@ -372,7 +372,7 @@ Times New Roman fonts are embedded when available; standard PDF Times fonts
 are the portable fallback. The two-page limit includes references, with no
 separate title page or invented student details.
 
-After the release tag exists, `python scripts/build_submission.py --tag v1.0.1`
+After the release tag exists, `python scripts/build_submission.py --tag v1.0.2`
 creates the source ZIP, Git-history bundle, and SHA-256 manifest in `dist/`.
 The archive is built from committed files, so virtual environments and caches
 are excluded. The bundle preserves all milestone commits and the release tag.
@@ -383,4 +383,4 @@ Potential extensions include AVL or red-black balancing, breadth-first traversal
 
 ---
 
-**Treemap** — Build, test, visualize, and analyze tree-based data structures in Python.
+**TreeMap** — Build, test, visualize, and analyze tree-based data structures in Python.

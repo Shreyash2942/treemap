@@ -5,8 +5,8 @@ import sys
 import pytest
 from conftest import assert_bst_valid
 
-from bst_map import BinarySearchTree, TreeNode
-from bst_map.core.traversals import inorder, postorder, preorder
+from treemap import BinarySearchTree, TreeNode
+from treemap.core.traversals import inorder, postorder, preorder
 
 TRAVERSALS = [inorder, preorder, postorder]
 

@@ -144,10 +144,19 @@ def validate_release(root: Path) -> dict:
     required = [
         "README.md",
         "pyproject.toml",
-        "src/bst_map/py.typed",
+        "src/treemap/core/bst.py",
+        "src/treemap/core/node.py",
+        "src/treemap/core/operations.py",
+        "src/treemap/core/traversals.py",
+        "src/treemap/core/balance.py",
+        "src/treemap/maps/tree_map.py",
+        "src/treemap/maps/list_map.py",
+        "src/treemap/visualization/tree_renderer.py",
+        "src/treemap/py.typed",
         "docs/architecture.md",
         "docs/performance_analysis.md",
-        "docs/requirements.md",
+        "docs/REQUIREMENTS.md",
+        "docs/IMPLEMENTATION_PLAN.md",
         "docs/evaluation.md",
         "docs/evaluation.pdf",
         "docs/evaluation_sources.md",
@@ -156,9 +165,19 @@ def validate_release(root: Path) -> dict:
         "benchmarks/benchmark_search.py",
         "examples/demo.py",
         "results/pytest_results.xml",
+        "tests/conftest.py",
+        "results/performance_results.csv",
+        "results/benchmark_chart.png",
     ]
     for filename in required:
         require((root / filename).is_file(), f"Missing required deliverable: {filename}")
+        directory = root
+        for component in Path(filename).parts:
+            require(
+                component in {path.name for path in directory.iterdir()},
+                f"Required deliverable has incorrect filename case: {filename}",
+            )
+            directory /= component
     project = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))["project"]
     require(project["name"] == "treemap", "Expected project distribution name treemap")
     require(

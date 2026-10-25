@@ -6,10 +6,10 @@ import sys
 import pytest
 from conftest import assert_bst_valid
 
-from bst_map import TreeMap
-from bst_map.core.balance import analyze_balance
-from bst_map.maps import TreeMap as ExportedTreeMap
-from bst_map.maps.tree_map import TreeMap as ModuleTreeMap
+from treemap import TreeMap
+from treemap.core.balance import analyze_balance
+from treemap.maps import TreeMap as ExportedTreeMap
+from treemap.maps.tree_map import TreeMap as ModuleTreeMap
 
 
 def test_public_root_supports_read_only_inspection_and_tracks_deletion():

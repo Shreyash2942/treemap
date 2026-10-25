@@ -1,6 +1,6 @@
 # Final submission guide
 
-Release: **Treemap 1.0.1**, lightweight tag **v1.0.1**, **23 milestone commits plus one naming correction**.
+Release: **TreeMap 1.0.2**, lightweight tag **v1.0.2**, **23 milestone commits plus submission corrections**.
 
 ## Review order
 
@@ -8,7 +8,7 @@ Release: **Treemap 1.0.1**, lightweight tag **v1.0.1**, **23 milestone commits p
 2. [Architecture](architecture.md): responsibilities, dependencies, contracts, and decisions.
 3. [Performance analysis](performance_analysis.md): executed results, theory, uncertainty, and limits.
 4. [Evaluation PDF](evaluation.pdf), [editable source](evaluation.md), and [citation notes](evaluation_sources.md).
-5. [Requirements matrix](requirements.md), [final validation](../results/final_validation.json), and [213-test JUnit evidence](../results/pytest_results.xml).
+5. [Requirements matrix](REQUIREMENTS.md), [final validation](../results/final_validation.json), and [213-test JUnit evidence](../results/pytest_results.xml).
 
 The evaluation is exactly two pages including references. It uses third-person
 academic prose, author/date citations, hanging references, 12-point Times,
@@ -48,20 +48,20 @@ Rebuild the PDF with `python -m pip install -e ".[docs]"` followed by
 
 ```bash
 python -m build
-python scripts/build_submission.py --tag v1.0.1
+python scripts/build_submission.py --tag v1.0.2
 ```
 
 ## Generated files in dist/
 
-- `treemap-v1.0.1.zip`: all committed source, tests, documentation, PDF, and evidence.
-- `treemap-v1.0.1.bundle`: Git history and refs, including the release tag.
-- `treemap-1.0.1-py3-none-any.whl`: installable typed runtime library.
-- `treemap-1.0.1.tar.gz`: source distribution with documentation and evidence.
+- `treemap-v1.0.2.zip`: all committed source, tests, documentation, PDF, and evidence.
+- `treemap-v1.0.2.bundle`: Git history and refs, including the release tag.
+- `treemap-1.0.2-py3-none-any.whl`: installable typed runtime library.
+- `treemap-1.0.2.tar.gz`: source distribution with documentation and evidence.
 - `release_manifest.json` and `SHA256SUMS`: revision and artifact-integrity information.
 - `clean_install_validation.json`: isolated wheel-install verification, when generated.
 
 The ZIP excludes `.git`, environments, and caches. Recover history separately
-with `git clone treemap-v1.0.1.bundle treemap`. Use the ZIP or source distribution
+with `git clone treemap-v1.0.2.bundle treemap`. Use the ZIP or source distribution
 for coursework materials; the wheel contains the runtime package.
 
 Verification uses CPython 3.14.4, with a Python 3.11 syntax/type-check target.

@@ -8,8 +8,8 @@ from datetime import date
 import pytest
 from conftest import assert_bst_valid
 
-from bst_map import BinarySearchTree
-from bst_map.core.operations import delete_node, maximum_node, minimum_node
+from treemap import BinarySearchTree
+from treemap.core.operations import delete_node, maximum_node, minimum_node
 
 
 @pytest.mark.parametrize("selection", ["root", "minimum", "maximum"])

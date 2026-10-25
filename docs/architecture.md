@@ -1,7 +1,7 @@
 # Architecture
 
-The project is named **Treemap**, with distribution name `treemap` and repository
-directory `treemap`. The import package is `bst_map`. The project uses a `src/` layout; install it
+The project is named **TreeMap**, with distribution name `treemap` and repository
+directory `treemap`. The import package is `treemap`. The project uses a `src/` layout; install it
 with `python -m pip install -e ".[dev]"` before running tests.
 
 ## Class responsibilities and module dependencies
@@ -115,11 +115,11 @@ It neither rotates nor mutates the tree, and reports are recomputed on each call
 
 `maps/tree_map.py` owns a `BinarySearchTree` and delegates storage, lookup,
 size, and deletion to it. It uses the shared in-order traversal for collections.
-The public class is available from `bst_map`, `bst_map.maps`, or its module.
+The public class is available from `treemap`, `treemap.maps`, or its module.
 `TreeMap.root` is a read-only inspection property returning the owned BST's root,
 so clients can analyze/render a map without reaching into `_tree`. Returned
 nodes are mutable objects; callers must leave their keys and links unchanged.
-The typed distribution includes `bst_map/py.typed`, and strict mypy checks cover
+The typed distribution includes `treemap/py.typed`, and strict mypy checks cover
 the source package and benchmark module with a Python 3.11 target.
 
 | Method | Result | Missing key behavior | Time |
@@ -189,7 +189,7 @@ evaluation is supplied as editable Markdown and an exactly two-page PDF.
 
 Pytest adds the repository root to its test import path so the standalone
 `pytest` command can import the benchmark module just like `python -m pytest`.
-The runtime `bst_map` package still comes from the installed `src/` package.
+The runtime `treemap` package still comes from the installed `src/` package.
 
 ## Knowledge graph
 

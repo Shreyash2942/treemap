@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from typing import Generic, TypeVar, overload
 
-from bst_map.core.bst import BinarySearchTree
-from bst_map.core.node import K, TreeNode, V
-from bst_map.core.traversals import inorder
+from treemap.core.bst import BinarySearchTree
+from treemap.core.node import K, TreeNode, V
+from treemap.core.traversals import inorder
 
 D = TypeVar("D")
 

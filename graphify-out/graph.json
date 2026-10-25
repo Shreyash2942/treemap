@@ -33,34 +33,34 @@
     {
       "label": "__init__.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\__init__.py",
+      "source_file": "src\\treemap\\__init__.py",
       "source_location": "L1",
-      "id": "src_bst_map_init_py",
+      "id": "src_treemap_init_py",
       "community": 2,
       "norm_label": "__init__.py"
     },
     {
       "label": "Educational binary search tree and map toolkit.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\__init__.py",
+      "source_file": "src\\treemap\\__init__.py",
       "source_location": "L1",
-      "id": "src_bst_map_init_py_init_rationale_1",
+      "id": "src_treemap_init_py_init_rationale_1",
       "community": 2,
       "norm_label": "educational binary search tree and map toolkit."
     },
     {
       "label": "balance.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L1",
-      "id": "src_bst_map_core_balance_py",
+      "id": "src_treemap_core_balance_py",
       "community": 3,
       "norm_label": "balance.py"
     },
     {
       "label": "BalanceReport",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L16",
       "id": "balance_balancereport",
       "community": 3,
@@ -69,7 +69,7 @@
     {
       "label": "is_balanced()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L24",
       "id": "balance_is_balanced",
       "community": 3,
@@ -78,7 +78,7 @@
     {
       "label": "analyze_balance()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L29",
       "id": "balance_analyze_balance",
       "community": 3,
@@ -87,7 +87,7 @@
     {
       "label": "height()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L60",
       "id": "balance_height",
       "community": 3,
@@ -96,7 +96,7 @@
     {
       "label": "balance_factor()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L65",
       "id": "balance_balance_factor",
       "community": 3,
@@ -105,7 +105,7 @@
     {
       "label": "Iterative height and balance analysis; reports imbalance without rotations.  Hei",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L1",
       "id": "balance_rationale_1",
       "community": 3,
@@ -114,7 +114,7 @@
     {
       "label": "Tree height, root balance factor, and unbalanced keys in post-order.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L17",
       "id": "balance_rationale_17",
       "community": 3,
@@ -123,7 +123,7 @@
     {
       "label": "Return whether every node's absolute balance factor is at most 1.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L25",
       "id": "balance_rationale_25",
       "community": 4,
@@ -132,7 +132,7 @@
     {
       "label": "Inspect all subtrees in one O(n) pass without mutation or recursion.      Pendin",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L30",
       "id": "balance_rationale_30",
       "community": 3,
@@ -141,7 +141,7 @@
     {
       "label": "Return subtree height in edges; return -1 for an empty subtree.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L61",
       "id": "balance_rationale_61",
       "community": 3,
@@ -150,7 +150,7 @@
     {
       "label": "Return height(left) - height(right); return 0 for an empty subtree.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L66",
       "id": "balance_rationale_66",
       "community": 3,
@@ -159,7 +159,7 @@
     {
       "label": "Return whether all subtrees satisfy the height-balance condition.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L71",
       "id": "balance_rationale_71",
       "community": 3,
@@ -168,16 +168,16 @@
     {
       "label": "bst.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L1",
-      "id": "src_bst_map_core_bst_py",
+      "id": "src_treemap_core_bst_py",
       "community": 6,
       "norm_label": "bst.py"
     },
     {
       "label": "BinarySearchTree",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L11",
       "id": "bst_binarysearchtree",
       "community": 0,
@@ -186,7 +186,7 @@
     {
       "label": ".__init__()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L18",
       "id": "bst_binarysearchtree_init",
       "community": 0,
@@ -195,7 +195,7 @@
     {
       "label": "root()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L23",
       "id": "bst_root",
       "community": 6,
@@ -204,7 +204,7 @@
     {
       "label": ".__len__()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L27",
       "id": "bst_binarysearchtree_len",
       "community": 4,
@@ -213,7 +213,7 @@
     {
       "label": ".insert()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L31",
       "id": "bst_binarysearchtree_insert",
       "community": 0,
@@ -222,7 +222,7 @@
     {
       "label": ".search()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L55",
       "id": "bst_binarysearchtree_search",
       "community": 0,
@@ -231,7 +231,7 @@
     {
       "label": ".delete()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L67",
       "id": "bst_binarysearchtree_delete",
       "community": 0,
@@ -240,7 +240,7 @@
     {
       "label": ".minimum()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L77",
       "id": "bst_binarysearchtree_minimum",
       "community": 0,
@@ -249,7 +249,7 @@
     {
       "label": ".maximum()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L81",
       "id": "bst_binarysearchtree_maximum",
       "community": 0,
@@ -258,7 +258,7 @@
     {
       "label": "Iterative, unbalanced binary search tree with unique comparable keys.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L1",
       "id": "bst_rationale_1",
       "community": 6,
@@ -267,7 +267,7 @@
     {
       "label": "Store key-value pairs in strict BST order without automatic balancing.      Keys",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L12",
       "id": "bst_rationale_12",
       "community": 0,
@@ -276,7 +276,7 @@
     {
       "label": "Return the root for inspection, or `None` for an empty tree.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L24",
       "id": "bst_rationale_24",
       "community": 4,
@@ -285,7 +285,7 @@
     {
       "label": "Return the number of distinct keys in O(1) time.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L28",
       "id": "bst_rationale_28",
       "community": 4,
@@ -294,7 +294,7 @@
     {
       "label": "Insert a key or replace its value; an update does not change size.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L32",
       "id": "bst_rationale_32",
       "community": 0,
@@ -303,7 +303,7 @@
     {
       "label": "Return the matching node, or `None` if key is absent.          Returning a node",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L56",
       "id": "bst_rationale_56",
       "community": 0,
@@ -312,7 +312,7 @@
     {
       "label": "Remove key and return its old value; raise `KeyError` if absent.          Two-ch",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L68",
       "id": "bst_rationale_68",
       "community": 0,
@@ -321,7 +321,7 @@
     {
       "label": "Return the smallest-key node; raise `ValueError` on an empty tree.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L78",
       "id": "bst_rationale_78",
       "community": 0,
@@ -330,7 +330,7 @@
     {
       "label": "Return the largest-key node; raise `ValueError` on an empty tree.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L82",
       "id": "bst_rationale_82",
       "community": 0,
@@ -339,16 +339,16 @@
     {
       "label": "node.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L1",
-      "id": "src_bst_map_core_node_py",
+      "id": "src_treemap_core_node_py",
       "community": 3,
       "norm_label": "node.py"
     },
     {
       "label": "Comparable",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L9",
       "id": "node_comparable",
       "community": 6,
@@ -366,7 +366,7 @@
     {
       "label": ".__lt__()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L16",
       "id": "node_comparable_lt",
       "community": 6,
@@ -375,7 +375,7 @@
     {
       "label": "TreeNode",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L26",
       "id": "node_treenode",
       "community": 4,
@@ -384,7 +384,7 @@
     {
       "label": "Generic nodes and the key-ordering contract shared by the BST modules.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L1",
       "id": "node_rationale_1",
       "community": 3,
@@ -393,7 +393,7 @@
     {
       "label": "Keys must support `<` and equality with a consistent total ordering.      All ke",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L10",
       "id": "node_rationale_10",
       "community": 6,
@@ -402,7 +402,7 @@
     {
       "label": "Return whether this key precedes another key.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L17",
       "id": "node_rationale_17",
       "community": 6,
@@ -411,7 +411,7 @@
     {
       "label": "A key-value entry with optional children; nodes compare by identity.      Values",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L27",
       "id": "node_rationale_27",
       "community": 4,
@@ -420,16 +420,16 @@
     {
       "label": "operations.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L1",
-      "id": "src_bst_map_core_operations_py",
+      "id": "src_treemap_core_operations_py",
       "community": 6,
       "norm_label": "operations.py"
     },
     {
       "label": "minimum_node()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L8",
       "id": "operations_minimum_node",
       "community": 0,
@@ -438,7 +438,7 @@
     {
       "label": "maximum_node()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L18",
       "id": "operations_maximum_node",
       "community": 0,
@@ -447,7 +447,7 @@
     {
       "label": "delete_node()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L28",
       "id": "operations_delete_node",
       "community": 4,
@@ -456,7 +456,7 @@
     {
       "label": "Iterative operations on BST subtrees, independent of tree size tracking.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L1",
       "id": "operations_rationale_1",
       "community": 6,
@@ -465,7 +465,7 @@
     {
       "label": "Return the leftmost node; raise `ValueError` for an empty subtree.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L9",
       "id": "operations_rationale_9",
       "community": 0,
@@ -474,7 +474,7 @@
     {
       "label": "Return the rightmost node; raise `ValueError` for an empty subtree.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L19",
       "id": "operations_rationale_19",
       "community": 4,
@@ -483,7 +483,7 @@
     {
       "label": "Remove key and return the new subtree root and original value.      Raise `KeyEr",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L29",
       "id": "operations_rationale_29",
       "community": 4,
@@ -492,16 +492,16 @@
     {
       "label": "traversals.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L1",
-      "id": "src_bst_map_core_traversals_py",
+      "id": "src_treemap_core_traversals_py",
       "community": 4,
       "norm_label": "traversals.py"
     },
     {
       "label": "inorder()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L14",
       "id": "traversals_inorder",
       "community": 1,
@@ -510,7 +510,7 @@
     {
       "label": "preorder()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L27",
       "id": "traversals_preorder",
       "community": 4,
@@ -519,7 +519,7 @@
     {
       "label": "postorder()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L41",
       "id": "traversals_postorder",
       "community": 4,
@@ -528,7 +528,7 @@
     {
       "label": "Repeatable iterative traversals yielding nodes from a subtree root.  Traversals",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L1",
       "id": "traversals_rationale_1",
       "community": 4,
@@ -537,7 +537,7 @@
     {
       "label": "Yield left, root, right: sorted keys for a BST, in O(n) time/O(h) space.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L15",
       "id": "traversals_rationale_15",
       "community": 4,
@@ -546,7 +546,7 @@
     {
       "label": "Yield root, left, right in O(n) time and O(h) auxiliary space.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L28",
       "id": "traversals_rationale_28",
       "community": 4,
@@ -555,7 +555,7 @@
     {
       "label": "Yield left, right, root in O(n) time and O(h) auxiliary space.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L42",
       "id": "traversals_rationale_42",
       "community": 4,
@@ -564,34 +564,34 @@
     {
       "label": "__init__.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L1",
-      "id": "src_bst_map_core_init_py",
+      "id": "src_treemap_core_init_py",
       "community": 6,
       "norm_label": "__init__.py"
     },
     {
       "label": "Binary search tree nodes, operations, and analysis.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L1",
-      "id": "src_bst_map_core_init_py_init_rationale_1",
+      "id": "src_treemap_core_init_py_init_rationale_1",
       "community": 6,
       "norm_label": "binary search tree nodes, operations, and analysis."
     },
     {
       "label": "list_map.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\list_map.py",
+      "source_file": "src\\treemap\\maps\\list_map.py",
       "source_location": "L1",
-      "id": "src_bst_map_maps_list_map_py",
+      "id": "src_treemap_maps_list_map_py",
       "community": 7,
       "norm_label": "list_map.py"
     },
     {
       "label": "Reserved for the list-backed benchmark baseline.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\list_map.py",
+      "source_file": "src\\treemap\\maps\\list_map.py",
       "source_location": "L1",
       "id": "list_map_rationale_1",
       "community": 7,
@@ -600,16 +600,16 @@
     {
       "label": "tree_map.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L1",
-      "id": "src_bst_map_maps_tree_map_py",
+      "id": "src_treemap_maps_tree_map_py",
       "community": 6,
       "norm_label": "tree_map.py"
     },
     {
       "label": "TreeMap",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L14",
       "id": "tree_map_treemap",
       "community": 1,
@@ -618,7 +618,7 @@
     {
       "label": ".__init__()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L21",
       "id": "tree_map_treemap_init",
       "community": 0,
@@ -627,7 +627,7 @@
     {
       "label": ".__len__()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L24",
       "id": "tree_map_treemap_len",
       "community": 1,
@@ -636,7 +636,7 @@
     {
       "label": ".put()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L28",
       "id": "tree_map_treemap_put",
       "community": 1,
@@ -645,7 +645,7 @@
     {
       "label": "get()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L33",
       "id": "tree_map_get",
       "community": 6,
@@ -654,7 +654,7 @@
     {
       "label": ".get()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L38",
       "id": "tree_map_treemap_get",
       "community": 1,
@@ -663,7 +663,7 @@
     {
       "label": ".remove()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L43",
       "id": "tree_map_treemap_remove",
       "community": 1,
@@ -672,7 +672,7 @@
     {
       "label": ".contains_key()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L47",
       "id": "tree_map_treemap_contains_key",
       "community": 1,
@@ -681,7 +681,7 @@
     {
       "label": ".keys()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L51",
       "id": "tree_map_treemap_keys",
       "community": 1,
@@ -690,7 +690,7 @@
     {
       "label": ".values()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L55",
       "id": "tree_map_treemap_values",
       "community": 1,
@@ -699,7 +699,7 @@
     {
       "label": ".items()",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L59",
       "id": "tree_map_treemap_items",
       "community": 1,
@@ -708,7 +708,7 @@
     {
       "label": "An ordered key-value map backed by the project's unbalanced BST.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L1",
       "id": "tree_map_rationale_1",
       "community": 6,
@@ -717,7 +717,7 @@
     {
       "label": "Store unique comparable keys with unrestricted values, including `None`.      Ke",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L15",
       "id": "tree_map_rationale_15",
       "community": 1,
@@ -726,7 +726,7 @@
     {
       "label": "Return the number of unique keys in O(1) time.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L25",
       "id": "tree_map_rationale_25",
       "community": 1,
@@ -735,7 +735,7 @@
     {
       "label": "Insert or update an entry; updates preserve the number of keys.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L29",
       "id": "tree_map_rationale_29",
       "community": 1,
@@ -744,7 +744,7 @@
     {
       "label": "Return the stored value, or default only when key is absent.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L39",
       "id": "tree_map_rationale_39",
       "community": 1,
@@ -753,7 +753,7 @@
     {
       "label": "Remove an entry and return its value; raise `KeyError` if absent.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L44",
       "id": "tree_map_rationale_44",
       "community": 1,
@@ -762,7 +762,7 @@
     {
       "label": "Return whether key exists, including entries whose value is `None`.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L48",
       "id": "tree_map_rationale_48",
       "community": 1,
@@ -771,7 +771,7 @@
     {
       "label": "Return a new list of keys in sorted order in O(n) time.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L52",
       "id": "tree_map_rationale_52",
       "community": 1,
@@ -780,7 +780,7 @@
     {
       "label": "Return a new list of values ordered by key, retaining value references.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L56",
       "id": "tree_map_rationale_56",
       "community": 1,
@@ -789,7 +789,7 @@
     {
       "label": "Return a new list of key-value tuples sorted by key in O(n) time.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L60",
       "id": "tree_map_rationale_60",
       "community": 1,
@@ -798,34 +798,34 @@
     {
       "label": "__init__.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\__init__.py",
+      "source_file": "src\\treemap\\maps\\__init__.py",
       "source_location": "L1",
-      "id": "src_bst_map_maps_init_py",
+      "id": "src_treemap_maps_init_py",
       "community": 1,
       "norm_label": "__init__.py"
     },
     {
       "label": "Ordered maps backed by the project's data structures.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\maps\\__init__.py",
+      "source_file": "src\\treemap\\maps\\__init__.py",
       "source_location": "L1",
-      "id": "src_bst_map_maps_init_py_init_rationale_1",
+      "id": "src_treemap_maps_init_py_init_rationale_1",
       "community": 1,
       "norm_label": "ordered maps backed by the project's data structures."
     },
     {
       "label": "tree_renderer.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\visualization\\tree_renderer.py",
+      "source_file": "src\\treemap\\visualization\\tree_renderer.py",
       "source_location": "L1",
-      "id": "src_bst_map_visualization_tree_renderer_py",
+      "id": "src_treemap_visualization_tree_renderer_py",
       "community": 8,
       "norm_label": "tree_renderer.py"
     },
     {
       "label": "Reserved for ASCII tree rendering in a later milestone.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\visualization\\tree_renderer.py",
+      "source_file": "src\\treemap\\visualization\\tree_renderer.py",
       "source_location": "L1",
       "id": "tree_renderer_rationale_1",
       "community": 8,
@@ -834,18 +834,18 @@
     {
       "label": "__init__.py",
       "file_type": "code",
-      "source_file": "src\\bst_map\\visualization\\__init__.py",
+      "source_file": "src\\treemap\\visualization\\__init__.py",
       "source_location": "L1",
-      "id": "src_bst_map_visualization_init_py",
+      "id": "src_treemap_visualization_init_py",
       "community": 9,
       "norm_label": "__init__.py"
     },
     {
       "label": "Tree visualization planned for a later milestone.",
       "file_type": "rationale",
-      "source_file": "src\\bst_map\\visualization\\__init__.py",
+      "source_file": "src\\treemap\\visualization\\__init__.py",
       "source_location": "L1",
-      "id": "src_bst_map_visualization_init_py_init_rationale_1",
+      "id": "src_treemap_visualization_init_py_init_rationale_1",
       "community": 9,
       "norm_label": "tree visualization planned for a later milestone."
     },
@@ -1783,39 +1783,39 @@
       "norm_label": "graphify architecture snapshot; token usage unavailable; not a correctness proof"
     },
     {
-      "label": "bst_map module reference",
+      "label": "treemap module reference",
       "file_type": "code",
       "source_file": "examples\\demo.py",
       "source_location": "L3",
       "node_kind": "module_reference",
-      "id": "bst_map",
+      "id": "treemap",
       "community": 2,
-      "norm_label": "bst_map module reference"
+      "norm_label": "treemap module reference"
     },
     {
-      "label": "bst_map.core module reference",
+      "label": "treemap.core module reference",
       "file_type": "code",
       "source_file": "examples\\demo.py",
       "source_location": "L4",
       "node_kind": "module_reference",
-      "id": "bst_map_core",
+      "id": "treemap_core",
       "community": 2,
-      "norm_label": "bst_map.core module reference"
+      "norm_label": "treemap.core module reference"
     },
     {
-      "label": "bst_map.maps module reference",
+      "label": "treemap.maps module reference",
       "file_type": "code",
-      "source_file": "src\\bst_map\\__init__.py",
+      "source_file": "src\\treemap\\__init__.py",
       "source_location": "L4",
       "node_kind": "module_reference",
-      "id": "bst_map_maps",
+      "id": "treemap_maps",
       "community": 2,
-      "norm_label": "bst_map.maps module reference"
+      "norm_label": "treemap.maps module reference"
     },
     {
       "label": "dataclasses module reference",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L9",
       "node_kind": "module_reference",
       "id": "dataclasses",
@@ -1825,7 +1825,7 @@
     {
       "label": "typing module reference",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L10",
       "node_kind": "module_reference",
       "id": "typing",
@@ -1833,38 +1833,38 @@
       "norm_label": "typing module reference"
     },
     {
-      "label": "bst_map.core.node module reference",
+      "label": "treemap.core.node module reference",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L12",
       "node_kind": "module_reference",
-      "id": "bst_map_core_node",
+      "id": "treemap_core_node",
       "community": 6,
-      "norm_label": "bst_map.core.node module reference"
+      "norm_label": "treemap.core.node module reference"
     },
     {
       "label": "BalanceReport.is_balanced property",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L24",
       "id": "balance_balancereport_is_balanced",
       "community": 4,
       "norm_label": "balancereport.is_balanced property"
     },
     {
-      "label": "bst_map.core.operations module reference",
+      "label": "treemap.core.operations module reference",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L8",
       "node_kind": "module_reference",
-      "id": "bst_map_core_operations",
+      "id": "treemap_core_operations",
       "community": 6,
-      "norm_label": "bst_map.core.operations module reference"
+      "norm_label": "treemap.core.operations module reference"
     },
     {
       "label": "BinarySearchTree.root property",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L23",
       "id": "bst_binarysearchtree_root",
       "community": 4,
@@ -1873,7 +1873,7 @@
     {
       "label": "collections.abc module reference",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L9",
       "node_kind": "module_reference",
       "id": "collections_abc",
@@ -1881,44 +1881,44 @@
       "norm_label": "collections.abc module reference"
     },
     {
-      "label": "bst_map.core.balance module reference",
+      "label": "treemap.core.balance module reference",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L3",
       "node_kind": "module_reference",
-      "id": "bst_map_core_balance",
+      "id": "treemap_core_balance",
       "community": 6,
-      "norm_label": "bst_map.core.balance module reference"
+      "norm_label": "treemap.core.balance module reference"
     },
     {
-      "label": "bst_map.core.bst module reference",
+      "label": "treemap.core.bst module reference",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L4",
       "node_kind": "module_reference",
-      "id": "bst_map_core_bst",
+      "id": "treemap_core_bst",
       "community": 6,
-      "norm_label": "bst_map.core.bst module reference"
+      "norm_label": "treemap.core.bst module reference"
     },
     {
-      "label": "bst_map.core.traversals module reference",
+      "label": "treemap.core.traversals module reference",
       "file_type": "code",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L6",
       "node_kind": "module_reference",
-      "id": "bst_map_core_traversals",
+      "id": "treemap_core_traversals",
       "community": 6,
-      "norm_label": "bst_map.core.traversals module reference"
+      "norm_label": "treemap.core.traversals module reference"
     },
     {
-      "label": "bst_map.maps.tree_map module reference",
+      "label": "treemap.maps.tree_map module reference",
       "file_type": "code",
-      "source_file": "src\\bst_map\\maps\\__init__.py",
+      "source_file": "src\\treemap\\maps\\__init__.py",
       "source_location": "L3",
       "node_kind": "module_reference",
-      "id": "bst_map_maps_tree_map",
+      "id": "treemap_maps_tree_map",
       "community": 1,
-      "norm_label": "bst_map.maps.tree_map module reference"
+      "norm_label": "treemap.maps.tree_map module reference"
     },
     {
       "label": "pytest module reference",
@@ -1990,9 +1990,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "examples_demo_py",
-      "_tgt": "bst_map",
+      "_tgt": "treemap",
       "source": "examples_demo_py",
-      "target": "bst_map"
+      "target": "treemap"
     },
     {
       "relation": "imports_from",
@@ -2002,9 +2002,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "examples_demo_py",
-      "_tgt": "bst_map_core",
+      "_tgt": "treemap_core",
       "source": "examples_demo_py",
-      "target": "bst_map_core"
+      "target": "treemap_core"
     },
     {
       "relation": "contains",
@@ -2165,151 +2165,151 @@
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\__init__.py",
+      "source_file": "src\\treemap\\__init__.py",
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_init_py",
-      "_tgt": "bst_map_core",
-      "source": "src_bst_map_init_py",
-      "target": "bst_map_core"
+      "_src": "src_treemap_init_py",
+      "_tgt": "treemap_core",
+      "source": "src_treemap_init_py",
+      "target": "treemap_core"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\__init__.py",
+      "source_file": "src\\treemap\\__init__.py",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_init_py",
-      "_tgt": "bst_map_maps",
-      "source": "src_bst_map_init_py",
-      "target": "bst_map_maps"
+      "_src": "src_treemap_init_py",
+      "_tgt": "treemap_maps",
+      "source": "src_treemap_init_py",
+      "target": "treemap_maps"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\__init__.py",
+      "source_file": "src\\treemap\\__init__.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_init_py_init_rationale_1",
-      "_tgt": "src_bst_map_init_py",
-      "source": "src_bst_map_init_py",
-      "target": "src_bst_map_init_py_init_rationale_1"
+      "_src": "src_treemap_init_py_init_rationale_1",
+      "_tgt": "src_treemap_init_py",
+      "source": "src_treemap_init_py",
+      "target": "src_treemap_init_py_init_rationale_1"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_balance_py",
+      "_src": "src_treemap_core_balance_py",
       "_tgt": "dataclasses",
-      "source": "src_bst_map_core_balance_py",
+      "source": "src_treemap_core_balance_py",
       "target": "dataclasses"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_balance_py",
+      "_src": "src_treemap_core_balance_py",
       "_tgt": "typing",
-      "source": "src_bst_map_core_balance_py",
+      "source": "src_treemap_core_balance_py",
       "target": "typing"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L12",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_balance_py",
-      "_tgt": "bst_map_core_node",
-      "source": "src_bst_map_core_balance_py",
-      "target": "bst_map_core_node"
+      "_src": "src_treemap_core_balance_py",
+      "_tgt": "treemap_core_node",
+      "source": "src_treemap_core_balance_py",
+      "target": "treemap_core_node"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_balance_py",
+      "_src": "src_treemap_core_balance_py",
       "_tgt": "balance_balancereport",
-      "source": "src_bst_map_core_balance_py",
+      "source": "src_treemap_core_balance_py",
       "target": "balance_balancereport"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L70",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_balance_py",
+      "_src": "src_treemap_core_balance_py",
       "_tgt": "balance_is_balanced",
-      "source": "src_bst_map_core_balance_py",
+      "source": "src_treemap_core_balance_py",
       "target": "balance_is_balanced"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L29",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_balance_py",
+      "_src": "src_treemap_core_balance_py",
       "_tgt": "balance_analyze_balance",
-      "source": "src_bst_map_core_balance_py",
+      "source": "src_treemap_core_balance_py",
       "target": "balance_analyze_balance"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L60",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_balance_py",
+      "_src": "src_treemap_core_balance_py",
       "_tgt": "balance_height",
-      "source": "src_bst_map_core_balance_py",
+      "source": "src_treemap_core_balance_py",
       "target": "balance_height"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L65",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_balance_py",
+      "_src": "src_treemap_core_balance_py",
       "_tgt": "balance_balance_factor",
-      "source": "src_bst_map_core_balance_py",
+      "source": "src_treemap_core_balance_py",
       "target": "balance_balance_factor"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "balance_rationale_1",
-      "_tgt": "src_bst_map_core_balance_py",
-      "source": "src_bst_map_core_balance_py",
+      "_tgt": "src_treemap_core_balance_py",
+      "source": "src_treemap_core_balance_py",
       "target": "balance_rationale_1"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L55",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2321,7 +2321,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L17",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2333,7 +2333,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L12",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2345,14 +2345,14 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L3",
       "weight": 0.8,
       "confidence_score": 0.8,
-      "_src": "src_bst_map_core_init_py_init_rationale_1",
+      "_src": "src_treemap_core_init_py_init_rationale_1",
       "_tgt": "balance_balancereport",
       "source": "balance_balancereport",
-      "target": "src_bst_map_core_init_py_init_rationale_1"
+      "target": "src_treemap_core_init_py_init_rationale_1"
     },
     {
       "relation": "documents",
@@ -2369,7 +2369,7 @@
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L72",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2381,7 +2381,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L71",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2417,7 +2417,7 @@
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L62",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2429,7 +2429,7 @@
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L67",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2441,7 +2441,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L30",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2561,7 +2561,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L61",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2597,7 +2597,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L66",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2645,7 +2645,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L12",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2657,7 +2657,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L12",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2669,7 +2669,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L25",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2681,7 +2681,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L12",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2693,7 +2693,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L12",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2705,7 +2705,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L12",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2717,7 +2717,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L12",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2729,7 +2729,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\balance.py",
+      "source_file": "src\\treemap\\core\\balance.py",
       "source_location": "L12",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2741,79 +2741,79 @@
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_bst_py",
+      "_src": "src_treemap_core_bst_py",
       "_tgt": "typing",
-      "source": "src_bst_map_core_bst_py",
+      "source": "src_treemap_core_bst_py",
       "target": "typing"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_bst_py",
-      "_tgt": "bst_map_core_node",
-      "source": "src_bst_map_core_bst_py",
-      "target": "bst_map_core_node"
+      "_src": "src_treemap_core_bst_py",
+      "_tgt": "treemap_core_node",
+      "source": "src_treemap_core_bst_py",
+      "target": "treemap_core_node"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_bst_py",
-      "_tgt": "bst_map_core_operations",
-      "source": "src_bst_map_core_bst_py",
-      "target": "bst_map_core_operations"
+      "_src": "src_treemap_core_bst_py",
+      "_tgt": "treemap_core_operations",
+      "source": "src_treemap_core_bst_py",
+      "target": "treemap_core_operations"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_bst_py",
+      "_src": "src_treemap_core_bst_py",
       "_tgt": "bst_binarysearchtree",
-      "source": "src_bst_map_core_bst_py",
+      "source": "src_treemap_core_bst_py",
       "target": "bst_binarysearchtree"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L23",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_bst_py",
+      "_src": "src_treemap_core_bst_py",
       "_tgt": "bst_root",
-      "source": "src_bst_map_core_bst_py",
+      "source": "src_treemap_core_bst_py",
       "target": "bst_root"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "bst_rationale_1",
-      "_tgt": "src_bst_map_core_bst_py",
-      "source": "src_bst_map_core_bst_py",
+      "_tgt": "src_treemap_core_bst_py",
+      "source": "src_treemap_core_bst_py",
       "target": "bst_rationale_1"
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L18",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2825,7 +2825,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L27",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2837,7 +2837,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L31",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2849,7 +2849,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L55",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2861,7 +2861,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L67",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2873,7 +2873,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L77",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2885,7 +2885,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L81",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2897,7 +2897,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L12",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2909,7 +2909,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2921,19 +2921,19 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L4",
       "weight": 0.8,
       "confidence_score": 0.8,
-      "_src": "src_bst_map_core_init_py_init_rationale_1",
+      "_src": "src_treemap_core_init_py_init_rationale_1",
       "_tgt": "bst_binarysearchtree",
       "source": "bst_binarysearchtree",
-      "target": "src_bst_map_core_init_py_init_rationale_1"
+      "target": "src_treemap_core_init_py_init_rationale_1"
     },
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2945,7 +2945,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2957,7 +2957,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2969,7 +2969,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2981,7 +2981,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -2993,7 +2993,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -3005,7 +3005,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -3017,7 +3017,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -3029,7 +3029,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -3041,7 +3041,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -3053,7 +3053,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -3066,7 +3066,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L22",
       "weight": 1.0,
       "_src": "tree_map_treemap_init",
@@ -3281,7 +3281,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L28",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3293,7 +3293,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L32",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3306,7 +3306,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L34",
       "weight": 1.0,
       "_src": "bst_binarysearchtree_insert",
@@ -3318,7 +3318,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L30",
       "weight": 1.0,
       "_src": "tree_map_treemap_put",
@@ -3545,7 +3545,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L56",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3558,7 +3558,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L40",
       "weight": 1.0,
       "_src": "tree_map_treemap_get",
@@ -3570,7 +3570,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L49",
       "weight": 1.0,
       "_src": "tree_map_treemap_contains_key",
@@ -3761,7 +3761,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L68",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3774,7 +3774,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L73",
       "weight": 1.0,
       "_src": "bst_binarysearchtree_delete",
@@ -3786,7 +3786,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L45",
       "weight": 1.0,
       "_src": "tree_map_treemap_remove",
@@ -3941,7 +3941,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L78",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3954,7 +3954,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L79",
       "weight": 1.0,
       "_src": "bst_binarysearchtree_minimum",
@@ -4025,7 +4025,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L82",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4038,7 +4038,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L83",
       "weight": 1.0,
       "_src": "bst_binarysearchtree_maximum",
@@ -4109,7 +4109,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4121,7 +4121,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4133,7 +4133,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L24",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4145,7 +4145,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4157,7 +4157,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4169,7 +4169,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4181,7 +4181,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4193,7 +4193,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4205,7 +4205,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4217,7 +4217,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\bst.py",
+      "source_file": "src\\treemap\\core\\bst.py",
       "source_location": "L7",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4229,67 +4229,67 @@
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_node_py",
+      "_src": "src_treemap_core_node_py",
       "_tgt": "dataclasses",
-      "source": "src_bst_map_core_node_py",
+      "source": "src_treemap_core_node_py",
       "target": "dataclasses"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_node_py",
+      "_src": "src_treemap_core_node_py",
       "_tgt": "typing",
-      "source": "src_bst_map_core_node_py",
+      "source": "src_treemap_core_node_py",
       "target": "typing"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_node_py",
+      "_src": "src_treemap_core_node_py",
       "_tgt": "node_comparable",
-      "source": "src_bst_map_core_node_py",
+      "source": "src_treemap_core_node_py",
       "target": "node_comparable"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L26",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_node_py",
+      "_src": "src_treemap_core_node_py",
       "_tgt": "node_treenode",
-      "source": "src_bst_map_core_node_py",
+      "source": "src_treemap_core_node_py",
       "target": "node_treenode"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "node_rationale_1",
-      "_tgt": "src_bst_map_core_node_py",
-      "source": "src_bst_map_core_node_py",
+      "_tgt": "src_treemap_core_node_py",
+      "source": "src_treemap_core_node_py",
       "target": "node_rationale_1"
     },
     {
       "relation": "inherits",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4301,7 +4301,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4313,7 +4313,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4325,19 +4325,19 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L5",
       "weight": 0.8,
       "confidence_score": 0.8,
-      "_src": "src_bst_map_core_init_py_init_rationale_1",
+      "_src": "src_treemap_core_init_py_init_rationale_1",
       "_tgt": "node_comparable",
       "source": "node_comparable",
-      "target": "src_bst_map_core_init_py_init_rationale_1"
+      "target": "src_treemap_core_init_py_init_rationale_1"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L17",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4349,7 +4349,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\node.py",
+      "source_file": "src\\treemap\\core\\node.py",
       "source_location": "L27",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4361,7 +4361,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L5",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4373,7 +4373,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L5",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4385,7 +4385,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L5",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4397,7 +4397,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L5",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4409,7 +4409,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L11",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4421,7 +4421,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L11",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4433,7 +4433,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L11",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4445,7 +4445,7 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L11",
       "weight": 0.8,
       "confidence_score": 0.8,
@@ -4457,14 +4457,14 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L5",
       "weight": 0.8,
       "confidence_score": 0.8,
-      "_src": "src_bst_map_core_init_py_init_rationale_1",
+      "_src": "src_treemap_core_init_py_init_rationale_1",
       "_tgt": "node_treenode",
       "source": "node_treenode",
-      "target": "src_bst_map_core_init_py_init_rationale_1"
+      "target": "src_treemap_core_init_py_init_rationale_1"
     },
     {
       "relation": "calls",
@@ -4529,67 +4529,67 @@
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_operations_py",
-      "_tgt": "bst_map_core_node",
-      "source": "src_bst_map_core_operations_py",
-      "target": "bst_map_core_node"
+      "_src": "src_treemap_core_operations_py",
+      "_tgt": "treemap_core_node",
+      "source": "src_treemap_core_operations_py",
+      "target": "treemap_core_node"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_operations_py",
+      "_src": "src_treemap_core_operations_py",
       "_tgt": "operations_minimum_node",
-      "source": "src_bst_map_core_operations_py",
+      "source": "src_treemap_core_operations_py",
       "target": "operations_minimum_node"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L18",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_operations_py",
+      "_src": "src_treemap_core_operations_py",
       "_tgt": "operations_maximum_node",
-      "source": "src_bst_map_core_operations_py",
+      "source": "src_treemap_core_operations_py",
       "target": "operations_maximum_node"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L28",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_operations_py",
+      "_src": "src_treemap_core_operations_py",
       "_tgt": "operations_delete_node",
-      "source": "src_bst_map_core_operations_py",
+      "source": "src_treemap_core_operations_py",
       "target": "operations_delete_node"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "operations_rationale_1",
-      "_tgt": "src_bst_map_core_operations_py",
-      "source": "src_bst_map_core_operations_py",
+      "_tgt": "src_treemap_core_operations_py",
+      "source": "src_treemap_core_operations_py",
       "target": "operations_rationale_1"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4613,7 +4613,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L19",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4637,7 +4637,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\operations.py",
+      "source_file": "src\\treemap\\core\\operations.py",
       "source_location": "L29",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4673,79 +4673,79 @@
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_traversals_py",
+      "_src": "src_treemap_core_traversals_py",
       "_tgt": "collections_abc",
-      "source": "src_bst_map_core_traversals_py",
+      "source": "src_treemap_core_traversals_py",
       "target": "collections_abc"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_traversals_py",
-      "_tgt": "bst_map_core_node",
-      "source": "src_bst_map_core_traversals_py",
-      "target": "bst_map_core_node"
+      "_src": "src_treemap_core_traversals_py",
+      "_tgt": "treemap_core_node",
+      "source": "src_treemap_core_traversals_py",
+      "target": "treemap_core_node"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_traversals_py",
+      "_src": "src_treemap_core_traversals_py",
       "_tgt": "traversals_inorder",
-      "source": "src_bst_map_core_traversals_py",
+      "source": "src_treemap_core_traversals_py",
       "target": "traversals_inorder"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L27",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_traversals_py",
+      "_src": "src_treemap_core_traversals_py",
       "_tgt": "traversals_preorder",
-      "source": "src_bst_map_core_traversals_py",
+      "source": "src_treemap_core_traversals_py",
       "target": "traversals_preorder"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L41",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_traversals_py",
+      "_src": "src_treemap_core_traversals_py",
       "_tgt": "traversals_postorder",
-      "source": "src_bst_map_core_traversals_py",
+      "source": "src_treemap_core_traversals_py",
       "target": "traversals_postorder"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "traversals_rationale_1",
-      "_tgt": "src_bst_map_core_traversals_py",
-      "source": "src_bst_map_core_traversals_py",
+      "_tgt": "src_treemap_core_traversals_py",
+      "source": "src_treemap_core_traversals_py",
       "target": "traversals_rationale_1"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L15",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4758,7 +4758,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L53",
       "weight": 1.0,
       "_src": "tree_map_treemap_keys",
@@ -4770,7 +4770,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L57",
       "weight": 1.0,
       "_src": "tree_map_treemap_values",
@@ -4782,7 +4782,7 @@
       "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L61",
       "weight": 1.0,
       "_src": "tree_map_treemap_items",
@@ -4829,7 +4829,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L28",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4853,7 +4853,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\traversals.py",
+      "source_file": "src\\treemap\\core\\traversals.py",
       "source_location": "L42",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4901,163 +4901,163 @@
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_init_py",
-      "_tgt": "bst_map_core_balance",
-      "source": "src_bst_map_core_init_py",
-      "target": "bst_map_core_balance"
+      "_src": "src_treemap_core_init_py",
+      "_tgt": "treemap_core_balance",
+      "source": "src_treemap_core_init_py",
+      "target": "treemap_core_balance"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_init_py",
-      "_tgt": "bst_map_core_bst",
-      "source": "src_bst_map_core_init_py",
-      "target": "bst_map_core_bst"
+      "_src": "src_treemap_core_init_py",
+      "_tgt": "treemap_core_bst",
+      "source": "src_treemap_core_init_py",
+      "target": "treemap_core_bst"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_init_py",
-      "_tgt": "bst_map_core_node",
-      "source": "src_bst_map_core_init_py",
-      "target": "bst_map_core_node"
+      "_src": "src_treemap_core_init_py",
+      "_tgt": "treemap_core_node",
+      "source": "src_treemap_core_init_py",
+      "target": "treemap_core_node"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_init_py",
-      "_tgt": "bst_map_core_traversals",
-      "source": "src_bst_map_core_init_py",
-      "target": "bst_map_core_traversals"
+      "_src": "src_treemap_core_init_py",
+      "_tgt": "treemap_core_traversals",
+      "source": "src_treemap_core_init_py",
+      "target": "treemap_core_traversals"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\core\\__init__.py",
+      "source_file": "src\\treemap\\core\\__init__.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_core_init_py_init_rationale_1",
-      "_tgt": "src_bst_map_core_init_py",
-      "source": "src_bst_map_core_init_py",
-      "target": "src_bst_map_core_init_py_init_rationale_1"
+      "_src": "src_treemap_core_init_py_init_rationale_1",
+      "_tgt": "src_treemap_core_init_py",
+      "source": "src_treemap_core_init_py",
+      "target": "src_treemap_core_init_py_init_rationale_1"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\list_map.py",
+      "source_file": "src\\treemap\\maps\\list_map.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "list_map_rationale_1",
-      "_tgt": "src_bst_map_maps_list_map_py",
-      "source": "src_bst_map_maps_list_map_py",
+      "_tgt": "src_treemap_maps_list_map_py",
+      "source": "src_treemap_maps_list_map_py",
       "target": "list_map_rationale_1"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_maps_tree_map_py",
+      "_src": "src_treemap_maps_tree_map_py",
       "_tgt": "typing",
-      "source": "src_bst_map_maps_tree_map_py",
+      "source": "src_treemap_maps_tree_map_py",
       "target": "typing"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_maps_tree_map_py",
-      "_tgt": "bst_map_core_bst",
-      "source": "src_bst_map_maps_tree_map_py",
-      "target": "bst_map_core_bst"
+      "_src": "src_treemap_maps_tree_map_py",
+      "_tgt": "treemap_core_bst",
+      "source": "src_treemap_maps_tree_map_py",
+      "target": "treemap_core_bst"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_maps_tree_map_py",
-      "_tgt": "bst_map_core_node",
-      "source": "src_bst_map_maps_tree_map_py",
-      "target": "bst_map_core_node"
+      "_src": "src_treemap_maps_tree_map_py",
+      "_tgt": "treemap_core_node",
+      "source": "src_treemap_maps_tree_map_py",
+      "target": "treemap_core_node"
     },
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_maps_tree_map_py",
-      "_tgt": "bst_map_core_traversals",
-      "source": "src_bst_map_maps_tree_map_py",
-      "target": "bst_map_core_traversals"
+      "_src": "src_treemap_maps_tree_map_py",
+      "_tgt": "treemap_core_traversals",
+      "source": "src_treemap_maps_tree_map_py",
+      "target": "treemap_core_traversals"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_maps_tree_map_py",
+      "_src": "src_treemap_maps_tree_map_py",
       "_tgt": "tree_map_treemap",
-      "source": "src_bst_map_maps_tree_map_py",
+      "source": "src_treemap_maps_tree_map_py",
       "target": "tree_map_treemap"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L36",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_maps_tree_map_py",
+      "_src": "src_treemap_maps_tree_map_py",
       "_tgt": "tree_map_get",
-      "source": "src_bst_map_maps_tree_map_py",
+      "source": "src_treemap_maps_tree_map_py",
       "target": "tree_map_get"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tree_map_rationale_1",
-      "_tgt": "src_bst_map_maps_tree_map_py",
-      "source": "src_bst_map_maps_tree_map_py",
+      "_tgt": "src_treemap_maps_tree_map_py",
+      "source": "src_treemap_maps_tree_map_py",
       "target": "tree_map_rationale_1"
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L21",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5069,7 +5069,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L24",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5081,7 +5081,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L28",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5093,7 +5093,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L38",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5105,7 +5105,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L43",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5117,7 +5117,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L47",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5129,7 +5129,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L51",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5141,7 +5141,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L55",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5153,7 +5153,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L59",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5165,7 +5165,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L15",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5177,14 +5177,14 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
-      "source_file": "src\\bst_map\\maps\\__init__.py",
+      "source_file": "src\\treemap\\maps\\__init__.py",
       "source_location": "L3",
       "weight": 0.8,
       "confidence_score": 0.8,
-      "_src": "src_bst_map_maps_init_py_init_rationale_1",
+      "_src": "src_treemap_maps_init_py_init_rationale_1",
       "_tgt": "tree_map_treemap",
       "source": "tree_map_treemap",
-      "target": "src_bst_map_maps_init_py_init_rationale_1"
+      "target": "src_treemap_maps_init_py_init_rationale_1"
     },
     {
       "relation": "uses",
@@ -5309,7 +5309,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L25",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5321,7 +5321,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L29",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5441,7 +5441,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L39",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5537,7 +5537,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L44",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5633,7 +5633,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L48",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5717,7 +5717,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L52",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5813,7 +5813,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L56",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5885,7 +5885,7 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\tree_map.py",
+      "source_file": "src\\treemap\\maps\\tree_map.py",
       "source_location": "L60",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6041,50 +6041,50 @@
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\__init__.py",
+      "source_file": "src\\treemap\\maps\\__init__.py",
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_maps_init_py",
-      "_tgt": "bst_map_maps_tree_map",
-      "source": "src_bst_map_maps_init_py",
-      "target": "bst_map_maps_tree_map"
+      "_src": "src_treemap_maps_init_py",
+      "_tgt": "treemap_maps_tree_map",
+      "source": "src_treemap_maps_init_py",
+      "target": "treemap_maps_tree_map"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\maps\\__init__.py",
+      "source_file": "src\\treemap\\maps\\__init__.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_maps_init_py_init_rationale_1",
-      "_tgt": "src_bst_map_maps_init_py",
-      "source": "src_bst_map_maps_init_py",
-      "target": "src_bst_map_maps_init_py_init_rationale_1"
+      "_src": "src_treemap_maps_init_py_init_rationale_1",
+      "_tgt": "src_treemap_maps_init_py",
+      "source": "src_treemap_maps_init_py",
+      "target": "src_treemap_maps_init_py_init_rationale_1"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\visualization\\tree_renderer.py",
+      "source_file": "src\\treemap\\visualization\\tree_renderer.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tree_renderer_rationale_1",
-      "_tgt": "src_bst_map_visualization_tree_renderer_py",
-      "source": "src_bst_map_visualization_tree_renderer_py",
+      "_tgt": "src_treemap_visualization_tree_renderer_py",
+      "source": "src_treemap_visualization_tree_renderer_py",
       "target": "tree_renderer_rationale_1"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "src\\bst_map\\visualization\\__init__.py",
+      "source_file": "src\\treemap\\visualization\\__init__.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "_src": "src_bst_map_visualization_init_py_init_rationale_1",
-      "_tgt": "src_bst_map_visualization_init_py",
-      "source": "src_bst_map_visualization_init_py",
-      "target": "src_bst_map_visualization_init_py_init_rationale_1"
+      "_src": "src_treemap_visualization_init_py_init_rationale_1",
+      "_tgt": "src_treemap_visualization_init_py",
+      "source": "src_treemap_visualization_init_py",
+      "target": "src_treemap_visualization_init_py_init_rationale_1"
     },
     {
       "relation": "imports",
@@ -6106,9 +6106,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_conftest_py",
-      "_tgt": "bst_map",
+      "_tgt": "treemap",
       "source": "tests_conftest_py",
-      "target": "bst_map"
+      "target": "treemap"
     },
     {
       "relation": "imports_from",
@@ -6118,9 +6118,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_conftest_py",
-      "_tgt": "bst_map_core_node",
+      "_tgt": "treemap_core_node",
       "source": "tests_conftest_py",
-      "target": "bst_map_core_node"
+      "target": "treemap_core_node"
     },
     {
       "relation": "contains",
@@ -6610,9 +6610,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_balance_py",
-      "_tgt": "bst_map",
+      "_tgt": "treemap",
       "source": "tests_test_balance_py",
-      "target": "bst_map"
+      "target": "treemap"
     },
     {
       "relation": "imports_from",
@@ -6622,9 +6622,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_balance_py",
-      "_tgt": "bst_map_core_balance",
+      "_tgt": "treemap_core_balance",
       "source": "tests_test_balance_py",
-      "target": "bst_map_core_balance"
+      "target": "treemap_core_balance"
     },
     {
       "relation": "imports_from",
@@ -6634,9 +6634,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_balance_py",
-      "_tgt": "bst_map_core_traversals",
+      "_tgt": "treemap_core_traversals",
       "source": "tests_test_balance_py",
-      "target": "bst_map_core_traversals"
+      "target": "treemap_core_traversals"
     },
     {
       "relation": "contains",
@@ -6802,9 +6802,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_bst_py",
-      "_tgt": "bst_map",
+      "_tgt": "treemap",
       "source": "tests_test_bst_py",
-      "target": "bst_map"
+      "target": "treemap"
     },
     {
       "relation": "imports_from",
@@ -6814,9 +6814,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_bst_py",
-      "_tgt": "bst_map_core_operations",
+      "_tgt": "treemap_core_operations",
       "source": "tests_test_bst_py",
-      "target": "bst_map_core_operations"
+      "target": "treemap_core_operations"
     },
     {
       "relation": "contains",
@@ -7078,9 +7078,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_edge_cases_py",
-      "_tgt": "bst_map",
+      "_tgt": "treemap",
       "source": "tests_test_edge_cases_py",
-      "target": "bst_map"
+      "target": "treemap"
     },
     {
       "relation": "imports_from",
@@ -7090,9 +7090,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_edge_cases_py",
-      "_tgt": "bst_map_core_operations",
+      "_tgt": "treemap_core_operations",
       "source": "tests_test_edge_cases_py",
-      "target": "bst_map_core_operations"
+      "target": "treemap_core_operations"
     },
     {
       "relation": "contains",
@@ -7282,9 +7282,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_traversals_py",
-      "_tgt": "bst_map",
+      "_tgt": "treemap",
       "source": "tests_test_traversals_py",
-      "target": "bst_map"
+      "target": "treemap"
     },
     {
       "relation": "imports_from",
@@ -7294,9 +7294,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_traversals_py",
-      "_tgt": "bst_map_core_traversals",
+      "_tgt": "treemap_core_traversals",
       "source": "tests_test_traversals_py",
-      "target": "bst_map_core_traversals"
+      "target": "treemap_core_traversals"
     },
     {
       "relation": "contains",
@@ -7462,9 +7462,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_tree_map_py",
-      "_tgt": "bst_map",
+      "_tgt": "treemap",
       "source": "tests_test_tree_map_py",
-      "target": "bst_map"
+      "target": "treemap"
     },
     {
       "relation": "imports_from",
@@ -7474,9 +7474,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_tree_map_py",
-      "_tgt": "bst_map_core_balance",
+      "_tgt": "treemap_core_balance",
       "source": "tests_test_tree_map_py",
-      "target": "bst_map_core_balance"
+      "target": "treemap_core_balance"
     },
     {
       "relation": "imports_from",
@@ -7486,9 +7486,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_tree_map_py",
-      "_tgt": "bst_map_maps",
+      "_tgt": "treemap_maps",
       "source": "tests_test_tree_map_py",
-      "target": "bst_map_maps"
+      "target": "treemap_maps"
     },
     {
       "relation": "imports_from",
@@ -7498,9 +7498,9 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "_src": "tests_test_tree_map_py",
-      "_tgt": "bst_map_maps_tree_map",
+      "_tgt": "treemap_maps_tree_map",
       "source": "tests_test_tree_map_py",
-      "target": "bst_map_maps_tree_map"
+      "target": "treemap_maps_tree_map"
     },
     {
       "relation": "contains",

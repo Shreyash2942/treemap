@@ -9,7 +9,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Generic
 
-from bst_map.core.node import K, TreeNode, V
+from treemap.core.node import K, TreeNode, V
 
 
 @dataclass(frozen=True, slots=True)

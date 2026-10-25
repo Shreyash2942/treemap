@@ -3,8 +3,8 @@
 import pytest
 from conftest import assert_bst_valid
 
-from bst_map import BinarySearchTree, TreeNode
-from bst_map.core.operations import delete_node, maximum_node, minimum_node
+from treemap import BinarySearchTree, TreeNode
+from treemap.core.operations import delete_node, maximum_node, minimum_node
 
 
 def test_node_fields_and_independent_child_defaults():

@@ -1,8 +1,8 @@
 """Run the Day 1 and Day 2 examples with `python examples/demo.py`."""
 
-from bst_map import BinarySearchTree, TreeMap
-from bst_map.core import analyze_balance, inorder, postorder, preorder
-from bst_map.visualization import render_tree
+from treemap import BinarySearchTree, TreeMap
+from treemap.core import analyze_balance, inorder, postorder, preorder
+from treemap.visualization import render_tree
 
 
 def main() -> None:

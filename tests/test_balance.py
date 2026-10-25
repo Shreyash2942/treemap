@@ -8,9 +8,9 @@ from dataclasses import FrozenInstanceError
 import pytest
 from conftest import assert_bst_valid
 
-from bst_map import BinarySearchTree
-from bst_map.core.balance import analyze_balance, balance_factor, height, is_balanced
-from bst_map.core.traversals import postorder
+from treemap import BinarySearchTree
+from treemap.core.balance import analyze_balance, balance_factor, height, is_balanced
+from treemap.core.traversals import postorder
 
 
 def breadth_first_height(root):

@@ -7,8 +7,8 @@ from dataclasses import dataclass
 
 import pytest
 
-from bst_map import BinarySearchTree, TreeNode
-from bst_map.core.node import K, V
+from treemap import BinarySearchTree, TreeNode
+from treemap.core.node import K, V
 
 
 def assert_bst_valid(tree: BinarySearchTree[K, V]) -> None:

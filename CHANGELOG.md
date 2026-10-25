@@ -1,11 +1,19 @@
 # Changelog
 
+## 1.0.2 ? October 25, 2026
+
+- Aligned the installed import package and source directory with `treemap`.
+- Added the full completion requirements, checked deliverables, and evidence matrix in `docs/REQUIREMENTS.md`.
+- Updated imports, examples, type-check configuration, graph paths, and release validation.
+- Repeated the benchmarks after the package rename and refreshed the analysis and evaluation.
+- Verified the submission from an isolated wheel installation and synchronized GitHub commits and release tags.
+
 ## 1.0.1 — October 25, 2026
 
 - Standardized the project title as Treemap and the distribution name as `treemap`.
 - Corrected documentation, knowledge-graph labels, and generated release filenames.
 - Derived archive names and the default release tag from package metadata.
-- Retained the prescribed `bst_map` Python imports and the original benchmark measurements.
+- Retained the prescribed Python imports and the original benchmark measurements.
 - Preserved the 23 milestone commits and original release tag; added a naming correction release.
 
 ## 1.0.0 — October 25, 2026

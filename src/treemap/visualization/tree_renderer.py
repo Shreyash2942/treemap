@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from bst_map.core.node import K, TreeNode, V
+from treemap.core.node import K, TreeNode, V
 
 
 def render_tree(root: TreeNode[K, V] | None, *, show_values: bool = False) -> str:

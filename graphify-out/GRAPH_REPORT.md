@@ -36,15 +36,15 @@
 
 ## Surprising Connections (you probably didn't know these)
 - `Generic TreeNode with comparable keys and unrestricted values` --documents--> `TreeNode`  [EXTRACTED]
-  docs/architecture.md → src\bst_map\core\node.py
+  docs/architecture.md → src\treemap\core\node.py
 - `Immutable BalanceReport: edge height, root factor, unbalanced keys, overall balance` --documents--> `BalanceReport`  [EXTRACTED]
-  docs/architecture.md → src\bst_map\core\balance.py
+  docs/architecture.md → src\treemap\core\balance.py
 - `Implemented iterative balance analysis of every subtree` --documents--> `analyze_balance()`  [EXTRACTED]
-  docs/architecture.md → src\bst_map\core\balance.py
+  docs/architecture.md → src\treemap\core\balance.py
 - `Iterative height and balance analysis; reports imbalance without rotations.  Hei` --uses--> `TreeNode`  [INFERRED]
-  src\bst_map\core\balance.py → src\bst_map\core\node.py
+  src\treemap\core\balance.py → src\treemap\core\node.py
 - `Tree height, root balance factor, and unbalanced keys in post-order.` --uses--> `TreeNode`  [INFERRED]
-  src\bst_map\core\balance.py → src\bst_map\core\node.py
+  src\treemap\core\balance.py → src\treemap\core\node.py
 
 ## Communities
 
@@ -54,11 +54,11 @@ Nodes (38): BinarySearchTree, Store key-value pairs in strict BST order without 
 
 ### Community 1 - "TreeMap Integration"
 Cohesion: 0.15
-Nodes (25): bst_map.maps.tree_map module reference, main(), Ordered maps backed by the project's data structures., TreeMap contract and integration with BST traversal, deletion, and balance., test_collections_are_sorted_by_keys_and_return_independent_lists(), test_deep_map_integrates_sorted_traversal_balance_and_deletion(), test_default_is_returned_unchanged_only_for_missing_keys(), test_empty_map_contract() (+17 more)
+Nodes (25): treemap.maps.tree_map module reference, main(), Ordered maps backed by the project's data structures., TreeMap contract and integration with BST traversal, deletion, and balance., test_collections_are_sorted_by_keys_and_return_independent_lists(), test_deep_map_integrates_sorted_traversal_balance_and_deletion(), test_default_is_returned_unchanged_only_for_missing_keys(), test_empty_map_contract() (+17 more)
 
 ### Community 2 - "Shared Test Infrastructure"
 Cohesion: 0.08
-Nodes (21): bst_map module reference, bst_map.core module reference, bst_map.maps module reference, collections module reference, conftest module reference, Shared fixtures and an independent, iterative BST invariant validator., Return the seven-node example from the README., sample_tree() (+13 more)
+Nodes (21): treemap module reference, treemap.core module reference, treemap.maps module reference, collections module reference, conftest module reference, Shared fixtures and an independent, iterative BST invariant validator., Return the seven-node example from the README., sample_tree() (+13 more)
 
 ### Community 3 - "Balance Algorithms and Reports"
 Cohesion: 0.13
@@ -74,7 +74,7 @@ Nodes (22): A zero root balance factor does not guarantee balanced descendants, 
 
 ### Community 6 - "Node Types and Module Imports"
 Cohesion: 0.11
-Nodes (13): bst_map.core.balance module reference, bst_map.core.bst module reference, bst_map.core.node module reference, bst_map.core.operations module reference, bst_map.core.traversals module reference, Iterative, unbalanced binary search tree with unique comparable keys., Comparable, Keys must support `<` and equality with a consistent total ordering.      All ke (+5 more)
+Nodes (13): treemap.core.balance module reference, treemap.core.bst module reference, treemap.core.node module reference, treemap.core.operations module reference, treemap.core.traversals module reference, Iterative, unbalanced binary search tree with unique comparable keys., Comparable, Keys must support `<` and equality with a consistent total ordering.      All ke (+5 more)
 
 ### Community 7 - "Planned ListMap Baseline"
 Cohesion: 1.0

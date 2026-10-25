@@ -9,8 +9,8 @@ from dataclasses import replace
 import pytest
 from benchmarks import benchmark_search as benchmark
 
-from bst_map import BinarySearchTree
-from bst_map.core import height
+from treemap import BinarySearchTree
+from treemap.core import height
 
 
 @pytest.mark.parametrize("size", [1, 50, 100, 500, 1000])

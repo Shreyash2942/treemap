@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import Generic
 
-from bst_map.core.node import K, TreeNode, V
-from bst_map.core.operations import delete_node, maximum_node, minimum_node
+from treemap.core.node import K, TreeNode, V
+from treemap.core.operations import delete_node, maximum_node, minimum_node
 
 
 class BinarySearchTree(Generic[K, V]):

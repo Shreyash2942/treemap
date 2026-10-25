@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from bst_map.core.node import K, TreeNode, V
+from treemap.core.node import K, TreeNode, V
 
 
 def minimum_node(root: TreeNode[K, V] | None) -> TreeNode[K, V]:

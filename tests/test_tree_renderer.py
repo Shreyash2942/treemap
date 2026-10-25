@@ -6,8 +6,8 @@ from pathlib import Path
 import pytest
 from conftest import assert_bst_valid
 
-from bst_map import BinarySearchTree, TreeNode
-from bst_map.visualization import render_tree
+from treemap import BinarySearchTree, TreeNode
+from treemap.visualization import render_tree
 
 
 def test_empty_tree():

@@ -20,8 +20,8 @@ from dataclasses import asdict, dataclass
 from datetime import UTC, datetime
 from pathlib import Path
 
-from bst_map import ListMap, TreeMap
-from bst_map.core import height
+from treemap import ListMap, TreeMap
+from treemap.core import height
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 ORDERS = ("balanced_like", "sorted")
@@ -302,10 +302,10 @@ def write_outputs(
     )
     sources = [
         "benchmarks/benchmark_search.py",
-        "src/bst_map/core/node.py",
-        "src/bst_map/core/bst.py",
-        "src/bst_map/maps/tree_map.py",
-        "src/bst_map/maps/list_map.py",
+        "src/treemap/core/node.py",
+        "src/treemap/core/bst.py",
+        "src/treemap/maps/tree_map.py",
+        "src/treemap/maps/list_map.py",
     ]
     metadata = {
         "measured_at_utc": datetime.now(UTC).isoformat(),

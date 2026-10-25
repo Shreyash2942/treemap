@@ -4,9 +4,9 @@ import random
 
 import pytest
 
-from bst_map import ListMap, TreeMap
-from bst_map.maps import ListMap as ExportedListMap
-from bst_map.maps.list_map import ListMap as ModuleListMap
+from treemap import ListMap, TreeMap
+from treemap.maps import ListMap as ExportedListMap
+from treemap.maps.list_map import ListMap as ModuleListMap
 
 
 def test_list_map_exports():

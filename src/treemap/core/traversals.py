@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from collections.abc import Iterator
 
-from bst_map.core.node import K, TreeNode, V
+from treemap.core.node import K, TreeNode, V
 
 
 def inorder(root: TreeNode[K, V] | None) -> Iterator[TreeNode[K, V]]:
