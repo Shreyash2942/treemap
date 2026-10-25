@@ -20,9 +20,8 @@ def git(*arguments: str) -> str:
 
 
 def build_submission(tag: str, output: Path) -> dict:
-    version = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))["project"][
-        "version"
-    ]
+    project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))["project"]
+    name, version = project["name"], project["version"]
     if tag != f"v{version}":
         raise ValueError("Tag must match the package version")
     if git("status", "--porcelain"):
@@ -32,7 +31,7 @@ def build_submission(tag: str, output: Path) -> dict:
         raise ValueError("The release tag must point to HEAD")
     output = output.resolve()
     output.mkdir(parents=True, exist_ok=True)
-    stem = f"bstkit-{tag}"
+    stem = f"{name}-{tag}"
     archive, bundle = output / f"{stem}.zip", output / f"{stem}.bundle"
     git("archive", "--format=zip", f"--prefix={stem}/", f"--output={archive}", tag)
     git("bundle", "create", str(bundle), "--all")
@@ -40,14 +39,15 @@ def build_submission(tag: str, output: Path) -> dict:
     artifacts = [
         archive,
         bundle,
-        *sorted(output.glob(f"bstkit-{version}*.whl")),
-        *sorted(output.glob(f"bstkit-{version}.tar.gz")),
+        *sorted(output.glob(f"{name}-{version}*.whl")),
+        *sorted(output.glob(f"{name}-{version}.tar.gz")),
     ]
     clean_check = output / "clean_install_validation.json"
     if clean_check.is_file():
         artifacts.append(clean_check)
     checksums = {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in artifacts}
     manifest = {
+        "name": name,
         "version": version,
         "tag": tag,
         "commit": revision,
@@ -68,7 +68,8 @@ def build_submission(tag: str, output: Path) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--tag", default="v1.0.0")
+    project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))["project"]
+    parser.add_argument("--tag", default=f"v{project['version']}")
     parser.add_argument("--output", type=Path, default=ROOT / "dist")
     args = parser.parse_args()
     manifest = build_submission(args.tag, args.output)

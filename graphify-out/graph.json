@@ -1471,7 +1471,7 @@
       "norm_label": "treemap contract and integration with bst traversal, deletion, and balance."
     },
     {
-      "label": "bstkit modular educational BST toolkit",
+      "label": "Treemap modular educational BST toolkit",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "Overview",
@@ -1479,9 +1479,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "doc_bstkit",
+      "id": "doc_treemap_project",
       "community": 5,
-      "norm_label": "bstkit modular educational bst toolkit"
+      "norm_label": "treemap modular educational bst toolkit"
     },
     {
       "label": "Implemented BinarySearchTree core",
@@ -7653,9 +7653,9 @@
       "source_file": "README.md",
       "source_location": "Features",
       "weight": 1,
-      "_src": "doc_bstkit",
+      "_src": "doc_treemap_project",
       "_tgt": "doc_bst",
-      "source": "doc_bstkit",
+      "source": "doc_treemap_project",
       "target": "doc_bst"
     },
     {
@@ -7665,9 +7665,9 @@
       "source_file": "docs/architecture.md",
       "source_location": "Later modules",
       "weight": 1,
-      "_src": "doc_bstkit",
+      "_src": "doc_treemap_project",
       "_tgt": "doc_listmap",
-      "source": "doc_bstkit",
+      "source": "doc_treemap_project",
       "target": "doc_listmap"
     },
     {
@@ -7677,9 +7677,9 @@
       "source_file": "docs/architecture.md",
       "source_location": "Later modules",
       "weight": 1,
-      "_src": "doc_bstkit",
+      "_src": "doc_treemap_project",
       "_tgt": "doc_rendering",
-      "source": "doc_bstkit",
+      "source": "doc_treemap_project",
       "target": "doc_rendering"
     },
     {
@@ -7689,9 +7689,9 @@
       "source_file": "docs/architecture.md",
       "source_location": "Later modules",
       "weight": 1,
-      "_src": "doc_bstkit",
+      "_src": "doc_treemap_project",
       "_tgt": "doc_benchmarks",
-      "source": "doc_bstkit",
+      "source": "doc_treemap_project",
       "target": "doc_benchmarks"
     },
     {
@@ -7702,8 +7702,8 @@
       "source_location": "Project knowledge graph",
       "weight": 1,
       "_src": "doc_graph",
-      "_tgt": "doc_bstkit",
-      "source": "doc_bstkit",
+      "_tgt": "doc_treemap_project",
+      "source": "doc_treemap_project",
       "target": "doc_graph"
     },
     {

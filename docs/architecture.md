@@ -1,7 +1,7 @@
 # Architecture
 
-The distribution is named `bstkit`, the repository directory is `treemap`, and
-the import package is `bst_map`. The project uses a `src/` layout; install it
+The project is named **Treemap**, with distribution name `treemap` and repository
+directory `treemap`. The import package is `bst_map`. The project uses a `src/` layout; install it
 with `python -m pip install -e ".[dev]"` before running tests.
 
 ## Class responsibilities and module dependencies

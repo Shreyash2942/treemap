@@ -1,8 +1,8 @@
-# bstkit
+# Treemap
 
 **A modular Python toolkit for Binary Search Trees and tree-based Maps.**
 
-> **Status:** Complete — v1.0.0 release
+> **Status:** Complete — v1.0.1 release
 >
 > **Language:** Python 3.11+
 >
@@ -10,7 +10,7 @@
 
 ## Overview
 
-`bstkit` is an educational software engineering project that implements a Binary Search Tree (BST) and a Map backed by that tree. It demonstrates ordered key-value storage, tree manipulation, traversal, balance detection, visualization, and search-performance analysis. The repository directory is `treemap`; Python imports use `bst_map`.
+**Treemap** is an educational software engineering project that implements a Binary Search Tree (BST) and a Map backed by that tree. It demonstrates ordered key-value storage, tree manipulation, traversal, balance detection, visualization, and search-performance analysis. The repository directory is `treemap`; Python imports use `bst_map`.
 
 The implementation emphasizes modularity, clear interfaces, automated tests, and reproducible benchmarks. **The initial BST is not self-balancing**: balance detection reports problems but does not perform rotations.
 
@@ -349,13 +349,14 @@ Graphify outputs are available in [`graphify-out/`](graphify-out/):
 The checked-in graph is the **Day 2 snapshot**, before ListMap, the renderer,
 and the benchmark were implemented. It is not a current Day 3 architecture graph
 or a correctness proof; re-run graphify to refresh it.
+Graph labels use the current project name; the Day 2 relationships are unchanged.
 Graphify's token counters are unavailable here; no measured token cost is claimed.
 
 ## Completion criteria
 
 All requirements are implemented and mapped to evidence in the
 [requirements matrix](docs/requirements.md). The final repository has 23
-milestone commits and the lightweight release tag `v1.0.0`.
+milestone commits plus a naming correction, with the lightweight release tag `v1.0.1`.
 
 ## Rebuild documentation and prepare a submission
 
@@ -371,7 +372,7 @@ Times New Roman fonts are embedded when available; standard PDF Times fonts
 are the portable fallback. The two-page limit includes references, with no
 separate title page or invented student details.
 
-After the release tag exists, `python scripts/build_submission.py --tag v1.0.0`
+After the release tag exists, `python scripts/build_submission.py --tag v1.0.1`
 creates the source ZIP, Git-history bundle, and SHA-256 manifest in `dist/`.
 The archive is built from committed files, so virtual environments and caches
 are excluded. The bundle preserves all milestone commits and the release tag.
@@ -382,4 +383,4 @@ Potential extensions include AVL or red-black balancing, breadth-first traversal
 
 ---
 
-**bstkit** — Build, test, visualize, and analyze tree-based data structures in Python.
+**Treemap** — Build, test, visualize, and analyze tree-based data structures in Python.

@@ -70,7 +70,7 @@ Nodes (21): BalanceReport.is_balanced property, Return whether every node's abso
 
 ### Community 5 - "Architecture and Design Rationale"
 Cohesion: 0.12
-Nodes (22): A zero root balance factor does not guarantee balanced descendants, Implemented iterative balance analysis of every subtree, Planned repeatable TreeMap versus ListMap search benchmarks, Implemented BinarySearchTree core, bstkit modular educational BST toolkit, Support for trees deeper than Python's recursion limit, Graphify architecture snapshot; token usage unavailable; not a correctness proof, Strict bounds, dictionary workloads, and independent breadth-first height checks (+14 more)
+Nodes (22): A zero root balance factor does not guarantee balanced descendants, Implemented iterative balance analysis of every subtree, Planned repeatable TreeMap versus ListMap search benchmarks, Implemented BinarySearchTree core, Treemap modular educational BST toolkit, Support for trees deeper than Python's recursion limit, Graphify architecture snapshot; token usage unavailable; not a correctness proof, Strict bounds, dictionary workloads, and independent breadth-first height checks (+14 more)
 
 ### Community 6 - "Node Types and Module Imports"
 Cohesion: 0.11

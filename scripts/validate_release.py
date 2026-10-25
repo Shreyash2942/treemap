@@ -160,7 +160,10 @@ def validate_release(root: Path) -> dict:
     for filename in required:
         require((root / filename).is_file(), f"Missing required deliverable: {filename}")
     project = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))["project"]
-    require(project["version"] == "1.0.0", "Expected release version 1.0.0")
+    require(project["name"] == "treemap", "Expected project distribution name treemap")
+    require(
+        re.fullmatch(r"\d+\.\d+\.\d+", project["version"]) is not None, "Expected release version"
+    )
     require(project["dependencies"] == [], "Runtime library should remain dependency-free")
     suites = list(
         ElementTree.parse(root / "results/pytest_results.xml").getroot().iter("testsuite")
@@ -178,6 +181,7 @@ def validate_release(root: Path) -> dict:
     return {
         "validated_at_utc": datetime.now(UTC).isoformat(),
         "passed": True,
+        "name": project["name"],
         "version": project["version"],
         "validation_python": platform.python_version(),
         "evaluation": validate_evaluation(root / "docs/evaluation.pdf"),

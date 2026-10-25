@@ -3,8 +3,8 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bstkit"
-version = "1.0.0"
+name = "treemap"
+version = "1.0.1"
 description = "An educational toolkit for binary search trees and tree-based maps"
 readme = "README.md"
 requires-python = ">=3.11"
