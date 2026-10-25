@@ -38,6 +38,7 @@ results/*
 !results/benchmark_chart.png
 !results/benchmark_environment.txt
 !results/pytest_results.xml
+!results/final_validation.json
 
 # Editor and OS artifacts
 .vscode/
