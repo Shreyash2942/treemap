@@ -2,7 +2,7 @@
 
 **A modular Python toolkit for Binary Search Trees and tree-based Maps.**
 
-> **Status:** Days 1–3 complete — tested maps, tree diagrams, and measured benchmarks
+> **Status:** v1.0.0 release candidate — final documentation and verification
 >
 > **Language:** Python 3.11+
 >
@@ -16,7 +16,7 @@ The implementation emphasizes modularity, clear interfaces, automated tests, and
 
 ## Features
 
-Implemented through Day 3:
+Implemented features:
 
 - **BST:** Insert, search, delete, find minimum/maximum, and preserve the BST ordering invariant.
 - **Generic nodes:** Comparable keys, unrestricted values, and typed child references.
@@ -26,16 +26,22 @@ Implemented through Day 3:
 - **ListMap:** Sequential lookup with the same valid-key API as TreeMap.
 - **Visualization:** Deterministic ASCII diagrams before and after deletion.
 - **Benchmarking:** Reproducible hit/miss searches, raw samples, environment metadata, and a PNG chart.
-- **Validation:** 204 tests, including six explicit 50-item scenarios, strict ancestor bounds, deep trees, and dictionary comparisons.
+- **Validation:** Six explicit 50-item scenarios, strict ancestor bounds, deep trees, dictionary comparisons, and strict static type checks.
 - **Development setup:** Installable package, virtual environment, pytest, Ruff, and a runnable example.
 
-Remaining: the two-page evaluation and final project review.
+The [two-page evaluation](docs/evaluation.pdf), [editable source](docs/evaluation.md),
+and [requirements matrix](docs/requirements.md) accompany the implementation.
 
 ## Technology
 
-Python 3.11+, Python standard library, `pytest`, `ruff`, and Git. Project configuration uses `pyproject.toml` and a `src/` package layout. Graphify is an optional analysis tool, separate from runtime and development dependencies.
+Python 3.11+ and Git are required for development. The installed library has no
+third-party runtime dependencies. The `dev` extra supplies pytest, Ruff, mypy,
+package-build tools, and Matplotlib for the complete validation workflow.
+The `docs` extra supplies PDF generation and inspection tools. Runtime checks
+use the available CPython 3.14.4 interpreter; mypy targets Python 3.11 syntax.
+Graphify is an optional, separate analysis tool.
 
-## Planned repository structure
+## Repository structure
 
 ```text
 treemap/
@@ -73,6 +79,7 @@ treemap/
 │   └── demo.py
 ├── docs/
 │   ├── IMPLEMENTATION_PLAN.md
+│   ├── requirements.md
 │   ├── architecture.md
 │   ├── performance_analysis.md
 │   ├── evaluation.md
@@ -81,13 +88,16 @@ treemap/
 ├── results/
 │   ├── performance_results.csv
 │   └── benchmark_chart.png
+├── scripts/                  # PDF generation, release validation, submission archive
 ├── pyproject.toml
 ├── .gitattributes
 ├── .gitignore
 └── README.md
 ```
 
-> The structure above is the **target layout**; files will be added as milestones are implemented.
+The layout highlights the main deliverables; `results/` also retains raw samples,
+environment/source metadata, and regression evidence. Generated release archives
+and package distributions are written to the ignored `dist/` directory.
 
 ## Getting started
 
@@ -105,12 +115,19 @@ source .venv/bin/activate
 # Install project and development dependencies
 python -m pip install -e ".[dev]"
 
-# Also install plotting support to generate the benchmark PNG
-python -m pip install -e ".[dev,benchmark]"
+# Optional: rebuild and inspect the evaluation PDF
+python -m pip install -e ".[docs]"
 ```
 
 On Windows, activation is optional: use `.venv\Scripts\python.exe` in place of
 `python` if PowerShell script execution is disabled.
+
+For example, without PowerShell activation:
+
+```powershell
+.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.venv\Scripts\python.exe -m pytest -v
+```
 
 ## API
 
@@ -168,6 +185,9 @@ the key contract, node-reference behavior, and operation complexity.
 **TreeMap results:** `put` returns `None`; `remove` returns the removed value
 and raises `KeyError` if absent. `keys`, `values`, and `items` return new lists,
 ordered by key, containing references to the stored keys and values.
+`mapping.root` exposes the underlying root for traversal, balance analysis, and
+rendering. The property cannot be assigned; callers must also leave node keys
+and child links unchanged. The public package includes a `py.typed` marker.
 
 `ListMap` is available from `bst_map` or `bst_map.maps.list_map`. It offers the
 same methods for valid, mutually comparable keys, storing entries in a list
@@ -194,18 +214,25 @@ For insertion order `50, 30, 70, 20, 40, 60, 80`:
 | Post-order | 20, 40, 30, 60, 80, 70, 50 |
 
 ```python
+from bst_map import BinarySearchTree
 from bst_map.core import analyze_balance, inorder, postorder, preorder
+
+tree = BinarySearchTree()
+for key in [50, 30, 70, 20, 40, 60, 80]:
+    tree.insert(key, f"value-{key}")
 
 for traversal in [inorder, preorder, postorder]:
     print([node.key for node in traversal(tree.root)])
 
 report = analyze_balance(tree.root)
 print(report.height, report.is_balanced, report.unbalanced_keys)
+assert report.height == 2
+assert report.is_balanced
 ```
 
 Each traversal accepts a subtree root, yields the actual nodes, and returns an
-empty iterator for `None`. The table describes the seven-node tree before
-deletion; after the BST example's `delete(30)`, output reflects that mutation.
+empty iterator for `None`. The self-contained example rebuilds the seven-node
+tree, so its output matches the table.
 
 Height counts edges: empty tree **−1**, leaf **0**. Balance factor is
 `height(left) - height(right)`. `analyze_balance` returns the tree's height,
@@ -222,30 +249,23 @@ After installation, run:
 python -m pytest -v
 python -m ruff check .
 python -m ruff format --check .
+python -m mypy
 
 # Run the maps, algorithms, and before/after ASCII diagrams
 python examples/demo.py
 ```
 
-Day 1 tests cover empty and single-node trees; duplicate and missing keys; leaf,
-one-child, two-child, and root deletion; minimum/maximum; and BST ordering after
-mutations. Datasets include **at least 50 items**, six key types tested in separate
-trees, heterogeneous values including `None`, trees beyond the recursion limit,
-and five seeded workloads of 400 mixed operations starting with 100 keys each.
+Tests cover empty/single-node trees, every deletion shape, missing keys, duplicate
+updates, heterogeneous values including `None`, multiple comparable key types,
+and strict bounds/size after mutations. All six named datasets exercise at least
+50 entries or 50 updates. Seeded workloads compare the maps against a dictionary.
+Deep-tree checks exceed the recursion limit. Balance tests use an independent
+breadth-first height reference, and renderer tests verify the saved diagrams.
+Benchmark tests validate workloads and statistics without asserting a speed threshold.
 
-Day 2 adds traversal repeatability and node identity checks, every-subtree
-balance validation against breadth-first reference heights, sorted map
-collections, stored `None` and defaults, and three seeded TreeMap workloads.
-Traversal, balance, and map integration tests also exceed the recursion limit.
-
-Day 3 adds explicit 50-item random/sorted/reverse/string/mixed-value datasets,
-50 duplicate-key updates after preloading 50 keys, repeated deletions to empty,
-ListMap equivalence, golden tree diagrams, and benchmark-methodology tests.
-The committed [JUnit report](results/pytest_results.xml) records the full run.
-
-Validation passed with Python 3.14.4: **204 tests**, Ruff lint and format checks,
-dependency consistency, and the demo. Python 3.11 is the minimum supported syntax
-target; it has not been separately exercised in this environment.
+Both `pytest` and `python -m pytest` are supported. The committed
+[JUnit report](results/pytest_results.xml) records the full run. Python 3.11 is
+the syntax/type-check target; runtime verification uses Python 3.14.4.
 
 ## Performance evaluation
 
@@ -260,17 +280,11 @@ python benchmarks/benchmark_search.py
 python benchmarks/benchmark_search.py --no-chart
 ```
 
-Measured on this machine with CPython 3.14.4:
-
-| 1,000 entries | TreeMap hit (µs) | ListMap hit (µs) | TreeMap miss (µs) | ListMap miss (µs) |
-| --- | ---: | ---: | ---: | ---: |
-| Median-first, height 9 | 0.283 | 7.099 | 0.340 | 15.879 |
-| Sorted, height 999 | 10.855 | 6.603 | 10.896 | 13.268 |
-
-These are per-lookup batch averages, not individual-operation latency
-percentiles. Balanced shape helped TreeMap here; ListMap won successful
-lookups against the sorted chain. See the [performance analysis](docs/performance_analysis.md)
-for all sizes, exact methodology, uncertainty, and limits.
+The results are per-lookup batch averages, not individual-operation latency
+percentiles. Favorable tree shape helps TreeMap; sorted insertion produces a
+chain and can make sequential lookup competitive. See the
+[performance analysis](docs/performance_analysis.md) for the final measured
+values, exact methodology, uncertainty, and practical implications.
 
 ![Measured lookup times](results/benchmark_chart.png)
 
@@ -308,10 +322,12 @@ example [before deletion](docs/diagrams/tree_before.txt) and
 
 Detailed planning and project evidence are maintained separately from this README:
 
-- [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — Days 1–3 tasks, quality gates, Git commit schedules, and remaining scope.
+- [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — four-day tasks, quality gates, and commit schedules.
+- [`docs/requirements.md`](docs/requirements.md) — requirement-to-evidence traceability.
 - [`docs/architecture.md`](docs/architecture.md) — module design and core interfaces.
 - [`docs/performance_analysis.md`](docs/performance_analysis.md) — executed benchmark methodology, results, and limits.
-- `docs/evaluation.pdf` — two-page evaluation of when tree data structures are beneficial *(planned)*.
+- [`docs/evaluation.pdf`](docs/evaluation.pdf) — two-page academic evaluation, including APA-style citations and references.
+- [`docs/evaluation.md`](docs/evaluation.md) — editable evaluation source.
 - [`docs/diagrams/`](docs/diagrams/) — reproducible before-and-after tree diagrams.
 
 ## Project knowledge graph
@@ -330,6 +346,25 @@ Graphify's token counters are unavailable here; no measured token cost is claime
 ## Completion criteria
 
 The project is complete when BST operations preserve ordering; all traversals produce expected output; the Map stores and retrieves entries correctly; minimum/maximum and deletion handle edge cases; balance detection works; the 50+ item tests pass; diagrams and reproducible benchmarks are available; and the two-page evaluation is finished.
+
+## Rebuild documentation and prepare a submission
+
+```bash
+python -m pip install -e ".[dev,docs]"
+python scripts/build_evaluation.py
+python -m build
+```
+
+The PDF builder uses 12-point Times, double spacing, one-inch margins, page
+numbers, and hanging references. It checks the exact two-page limit. Windows
+Times New Roman fonts are embedded when available; standard PDF Times fonts
+are the portable fallback. The two-page limit includes references, with no
+separate title page or invented student details.
+
+After the release tag exists, `python scripts/build_submission.py --tag v1.0.0`
+creates the source ZIP, Git-history bundle, and SHA-256 manifest in `dist/`.
+The archive is built from committed files, so virtual environments and caches
+are excluded. The bundle preserves all milestone commits and the release tag.
 
 ## Future improvements
 

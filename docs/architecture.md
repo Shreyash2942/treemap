@@ -4,7 +4,38 @@ The distribution is named `bstkit`, the repository directory is `treemap`, and
 the import package is `bst_map`. The project uses a `src/` layout; install it
 with `python -m pip install -e ".[dev]"` before running tests.
 
-## Day 1 core
+## Class responsibilities and module dependencies
+
+| Component | Responsibility | Main dependencies |
+| --- | --- | --- |
+| `Comparable`, `TreeNode[K, V]` | Key-order contract and entry/child storage | Standard-library typing/dataclasses |
+| `BinarySearchTree[K, V]` | Own the root and unique-key count; coordinate mutation | Node and subtree operations |
+| Subtree operations | Delete using successor; find extrema without size bookkeeping | Node |
+| Traversals | Lazy node visitation in three deterministic orders | Node |
+| `BalanceReport`, analyzer | Immutable whole-tree height/balance diagnostics | Node |
+| `TreeMap[K, V]` | Reusable map interface backed by one BST | BST, in-order traversal |
+| `ListMap[K, V]` | Sequential-search comparison map | Key type contract, standard list |
+| ASCII renderer | Format structure without mutation | Node |
+| Benchmark command | Build equivalent workloads and record measurements | Both maps, height; optional Matplotlib |
+
+The dependency direction is from interfaces and analysis toward the node model:
+
+```text
+TreeMap --------> BinarySearchTree --------> TreeNode
+   |                    |
+   +--> inorder         +--> operations --> TreeNode
+
+traversals / balance / renderer -----------> TreeNode
+ListMap ---------------------------------> comparable-key contract
+benchmark -------------------------------> maps + height + result files
+```
+
+Package `__init__` files re-export public classes/functions. Algorithms import
+their concrete core modules rather than depending on the outer convenience API.
+The BST owns size tracking; helpers never increment/decrement it themselves.
+This prevents TreeMap from maintaining a second, potentially inconsistent count.
+
+## Core storage and mutation
 
 - `core/node.py`: generic `TreeNode` dataclass and comparable-key type contract.
 - `core/bst.py`: tree ownership, root, size, and public operations.
@@ -36,7 +67,7 @@ All Day 1 core operations are iterative. With height `h`, each operation takes O
 time and O(1) auxiliary space. A reasonably balanced tree has O(log n) height;
 sorted insertion can produce O(n) height. There are no automatic rotations.
 
-## Day 2 traversals
+## Traversals and worked example
 
 `core/traversals.py` exposes `inorder(root)`, `preorder(root)`, and
 `postorder(root)`. Each accepts a subtree root or `None` and returns a fresh lazy
@@ -48,7 +79,20 @@ Mutating the tree while consuming a traversal is unsupported.
 All three traversals use explicit stacks: O(n) time and O(h) auxiliary space.
 They work on skewed trees deeper than Python's recursion limit.
 
-## Day 2 height and balance
+For insertion `50, 30, 70, 20, 40, 60, 80`, the orders are:
+
+| Function | Keys |
+| --- | --- |
+| `inorder(root)` | 20, 30, 40, 50, 60, 70, 80 |
+| `preorder(root)` | 50, 30, 20, 40, 70, 60, 80 |
+| `postorder(root)` | 20, 40, 30, 60, 80, 70, 50 |
+
+Deleting 30 copies successor 40 into that node and unlinks the former successor.
+In-order then yields `20, 40, 50, 60, 70, 80`. The saved diagrams and golden tests
+demonstrate the same mutation. Iterative stacks were chosen to support sorted
+inputs beyond the interpreter recursion limit, rather than raising that limit.
+
+## Height and balance
 
 `core/balance.py` uses edge-count height: an empty subtree has height -1 and a
 leaf has height 0. A node's balance factor is `height(left) - height(right)`.
@@ -67,11 +111,16 @@ Analysis uses iterative post-order evaluation and child-height stacks. It takes
 O(n) time, O(h) working space, and O(u) report space for u unbalanced nodes.
 It neither rotates nor mutates the tree, and reports are recomputed on each call.
 
-## Day 2 TreeMap
+## TreeMap relationship to the BST
 
 `maps/tree_map.py` owns a `BinarySearchTree` and delegates storage, lookup,
 size, and deletion to it. It uses the shared in-order traversal for collections.
 The public class is available from `bst_map`, `bst_map.maps`, or its module.
+`TreeMap.root` is a read-only inspection property returning the owned BST's root,
+so clients can analyze/render a map without reaching into `_tree`. Returned
+nodes are mutable objects; callers must leave their keys and links unchanged.
+The typed distribution includes `bst_map/py.typed`, and strict mypy checks cover
+the source package and benchmark module with a Python 3.11 target.
 
 | Method | Result | Missing key behavior | Time |
 | --- | --- | --- | --- |
@@ -91,7 +140,7 @@ traversal space; their keys and values remain references to the stored objects.
 They are not live views or deep copies. TreeMap inherits the BST's key contract,
 comparison errors, and unbalanced worst-case O(n) lookup/mutation behavior.
 
-## Day 3 ListMap and visualization
+## ListMap and visualization
 
 `maps/list_map.py` stores `(key, value)` tuples in a list in insertion order.
 `get` checks equality sequentially and returns on the first match; `put`
@@ -111,7 +160,7 @@ for deep trees. Time and storage depend on emitted text: long chains can require
 O(n*h) characters of indentation. The traversal stack has O(h) entries, whose
 prefix strings also contribute storage; this is not a compact layout algorithm.
 
-## Day 3 benchmark and evidence
+## Benchmark and verification evidence
 
 `benchmarks/benchmark_search.py` is a standalone command against the installed
 package. It creates even integer keys, builds both maps with the same entries
@@ -135,8 +184,8 @@ CSV bytes across Git checkout. Plotting is optional via the `benchmark` extra;
 Matplotlib is imported only when creating the PNG. Neither map needs it at runtime.
 
 The full run and constraints are documented in `performance_analysis.md`.
-`results/pytest_results.xml` records the full 204-case regression run. The two-page
-evaluation remains the final milestone.
+`results/pytest_results.xml` records the full regression run. The academic
+evaluation is supplied as editable Markdown and an exactly two-page PDF.
 
 Pytest adds the repository root to its test import path so the standalone
 `pytest` command can import the benchmark module just like `python -m pytest`.
