@@ -4,7 +4,7 @@ recursive-include tests *.py
 recursive-include benchmarks *.py
 recursive-include examples *.py
 recursive-include scripts *.py
-recursive-include docs *.md *.pdf *.txt
+recursive-include docs *.md *.pdf *.txt *.docx *.png
 include results/performance_results.csv results/benchmark_samples.csv
 include results/benchmark_metadata.json results/benchmark_chart.png
 include results/benchmark_environment.txt results/pytest_results.xml results/final_validation.json

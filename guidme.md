@@ -176,9 +176,9 @@ scores.put("Ada", 95)
 scores.put("Ben", 88)  # Update the existing entry.
 
 assert len(scores) == 2
-print(scores.keys())    # ['Ada', 'Ben']
+print(scores.keys())  # ['Ada', 'Ben']
 print(scores.values())  # [95, 88]
-print(scores.items())   # [('Ada', 95), ('Ben', 88)]
+print(scores.items())  # [('Ada', 95), ('Ben', 88)]
 
 assert scores.get("Ada") == 95
 assert scores.get("Missing", "not found") == "not found"

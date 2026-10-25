@@ -338,6 +338,9 @@ Detailed planning and project evidence are maintained separately from this READM
 - [`docs/performance_analysis.md`](docs/performance_analysis.md) — executed benchmark methodology, results, and limits.
 - [`docs/evaluation.pdf`](docs/evaluation.pdf) — two-page academic evaluation, including APA-style citations and references.
 - [`docs/evaluation.md`](docs/evaluation.md) — editable evaluation source.
+- [`docs/project_report.pdf`](docs/project_report.pdf) — expanded APA-style report covering implementation, evidence, and all success criteria.
+- [`docs/project_report.docx`](docs/project_report.docx) — editable Word report with no author name.
+- [`docs/project_report_sources.md`](docs/project_report_sources.md) — report sources, formatting decisions, and rebuild instructions.
 - [`docs/SUBMISSION.md`](docs/SUBMISSION.md) — validation and release-artifact guide.
 - [`docs/diagrams/`](docs/diagrams/) — reproducible before-and-after tree diagrams.
 
