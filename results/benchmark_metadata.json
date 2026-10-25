@@ -1,5 +1,5 @@
 {
-  "measured_at_utc": "2026-10-24T23:17:53.242293+00:00",
+  "measured_at_utc": "2026-10-25T15:33:39.813232+00:00",
   "python": "3.14.4",
   "implementation": "CPython",
   "platform": "Windows-11-10.0.26300-SP0",
@@ -17,17 +17,17 @@
     "warmups": 2,
     "seed": 506
   },
-  "git_revision": "e19537e4d33fbc9d2a4a4af842de8001e6b799bb",
+  "git_revision": "7cce68990656d0435c377d47568a27318ba65621",
   "source_sha256": {
-    "benchmarks/benchmark_search.py": "c1c32a775a38933792c97223f28c3ec930f4d3a0367a4c89f156c91a4be4e638",
+    "benchmarks/benchmark_search.py": "be248fea5e8478323aa7f5f6eada0a6ff3d738d8bd86f2eac009db7341ee7bd3",
     "src/bst_map/core/node.py": "9b87c18d1c8537f09f8eaebfb4497c5c731b7c990a6089a7081e6d19e29029d1",
     "src/bst_map/core/bst.py": "6cec2387d01e28f19cc865b01eb1e6fdd73b2bce3648ed21811ba443d6ee1483",
-    "src/bst_map/maps/tree_map.py": "78fe39016235f6abd09dff693fd20418fdbb32c2147a3be820df903cd43c90b9",
+    "src/bst_map/maps/tree_map.py": "e1e4001974ca908e8c2d3c17a0f6648d883ad1866d1e6c95c6453d669d246696",
     "src/bst_map/maps/list_map.py": "d0144c0f7e280a5504d321806b9ba2a08b49a4ad5b919c27fe4c2b0a976a9ee9"
   },
   "artifact_sha256": {
-    "performance_results.csv": "7bf5fe2747690dfaa41d814fc579c519e3de8f1ecd282e74bc576b97ce18ae44",
-    "benchmark_samples.csv": "3261095f0581348c27bfdab00d0ba7fbdc3f1bcc91d28dad0277aace3f22edbb"
+    "performance_results.csv": "e72ef3f1ed7411814acee0991f0d4d1b8ea5dccb56ebd96a22b35459c18faff4",
+    "benchmark_samples.csv": "44ae24833c88e668eae94f5ef1e363cbbaea3bd54552b91ea15a02f669b4a8ad"
   },
   "timer": {
     "implementation": "QueryPerformanceCounter()",
