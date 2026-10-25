@@ -4,18 +4,31 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bstkit"
-version = "0.1.0"
+version = "1.0.0"
 description = "An educational toolkit for binary search trees and tree-based maps"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "ruff>=0.6"]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.11", "build>=1.2", "matplotlib>=3.8"]
 benchmark = ["matplotlib>=3.8"]
+docs = ["reportlab>=4", "pypdf>=5", "pymupdf>=1.24"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+bst_map = ["py.typed"]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["src/bst_map", "benchmarks"]
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["matplotlib.*"]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

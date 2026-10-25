@@ -15,7 +15,7 @@ import statistics
 import subprocess
 import sys
 import time
-from collections.abc import Callable, Sequence
+from collections.abc import Callable, Mapping, Sequence
 from dataclasses import asdict, dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -26,6 +26,7 @@ from bst_map.core import height
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 ORDERS = ("balanced_like", "sorted")
 IMPLEMENTATIONS = ("TreeMap", "ListMap")
+SearchLookup = Callable[[int, object], object]
 
 
 @dataclass(frozen=True)
@@ -121,7 +122,12 @@ def make_queries(size: int, count: int, seed: int) -> dict[str, tuple[int, ...]]
     return {"hit": hits, "miss": tuple(misses)}
 
 
-def _validate_queries(lookup, queries, expected, missing) -> None:
+def _validate_queries(
+    lookup: SearchLookup,
+    queries: Sequence[int],
+    expected: Mapping[int, int | None],
+    missing: object,
+) -> None:
     """Check values and missing-default identity before any timed calls."""
     for key in queries:
         actual = lookup(key, missing)
@@ -133,7 +139,7 @@ def _validate_queries(lookup, queries, expected, missing) -> None:
             raise AssertionError(f"incorrect lookup value for key {key}")
 
 
-def _time_queries(lookup, queries, missing) -> int:
+def _time_queries(lookup: SearchLookup, queries: Sequence[int], missing: object) -> int:
     start = time.perf_counter_ns()
     for key in queries:
         lookup(key, missing)
@@ -158,8 +164,8 @@ def run_benchmarks(
             for key, value in expected.items():
                 tree.put(key, value)
                 listing.put(key, value)
-            tree_height = height(tree._tree.root)
-            lookups = {"TreeMap": tree.get, "ListMap": listing.get}
+            tree_height = height(tree.root)
+            lookups: dict[str, SearchLookup] = {"TreeMap": tree.get, "ListMap": listing.get}
             for kind, queries in workloads.items():
                 for lookup in lookups.values():
                     _validate_queries(lookup, queries, expected, missing)

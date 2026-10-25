@@ -12,6 +12,21 @@ from bst_map.maps import TreeMap as ExportedTreeMap
 from bst_map.maps.tree_map import TreeMap as ModuleTreeMap
 
 
+def test_public_root_supports_read_only_inspection_and_tracks_deletion():
+    mapping = TreeMap()
+    assert mapping.root is None
+    for key in [20, 10, 30]:
+        mapping.put(key, str(key))
+    assert mapping.root.key == 20
+    assert analyze_balance(mapping.root).is_balanced
+    with pytest.raises(AttributeError):
+        mapping.root = None
+    assert mapping.remove(20) == "20"
+    assert mapping.root.key == 30
+    assert mapping.items() == [(10, "10"), (30, "30")]
+    assert_bst_valid(mapping._tree)
+
+
 def test_fifty_missing_removals_do_not_change_existing_none_entries():
     mapping = TreeMap()
     for key in range(50):

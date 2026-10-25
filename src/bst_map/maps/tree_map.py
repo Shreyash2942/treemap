@@ -5,7 +5,7 @@ from __future__ import annotations
 from typing import Generic, TypeVar, overload
 
 from bst_map.core.bst import BinarySearchTree
-from bst_map.core.node import K, V
+from bst_map.core.node import K, TreeNode, V
 from bst_map.core.traversals import inorder
 
 D = TypeVar("D")
@@ -24,6 +24,11 @@ class TreeMap(Generic[K, V]):
     def __len__(self) -> int:
         """Return the number of unique keys in O(1) time."""
         return len(self._tree)
+
+    @property
+    def root(self) -> TreeNode[K, V] | None:
+        """Return the BST root for traversal/analysis; do not mutate its links or keys."""
+        return self._tree.root
 
     def put(self, key: K, value: V) -> None:
         """Insert or update an entry; updates preserve the number of keys."""
