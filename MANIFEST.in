@@ -1,4 +1,4 @@
-include README.md CHANGELOG.md pyproject.toml .gitattributes .gitignore .graphifyignore
+include README.md guidme.md CHANGELOG.md pyproject.toml .gitattributes .gitignore .graphifyignore
 recursive-include src *.py py.typed
 recursive-include tests *.py
 recursive-include benchmarks *.py

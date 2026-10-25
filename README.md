@@ -103,6 +103,9 @@ and package distributions are written to the ignored `dist/` directory.
 
 ## Getting started
 
+For a detailed walkthrough with setup, API examples, benchmarks, and troubleshooting,
+see the [user guide](guidme.md).
+
 From the repository directory:
 
 ```bash
