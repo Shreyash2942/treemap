@@ -157,7 +157,7 @@ M4 acceptance checklist:
 - [x] Ruff lint/format, mypy, dependency checks, demo, and final benchmarks pass.
 - [x] Release checks reconstruct all 32 cases/288 raw samples and verify file hashes.
 - [x] Source ZIP, Git bundle, wheel/sdist, and checksum tooling are prepared.
-- [x] Five Day 4 commits complete the 23-commit sequence; lightweight tag `v1.0.0` identifies HEAD.
+- [x] Five Day 4 commits complete the 23-commit sequence; lightweight tag `v1.0.0` identifies the original milestone release.
 
 Evidence is in `results/final_validation.json`, `results/pytest_results.xml`, and
 `docs/SUBMISSION.md`. Release archives are generated under ignored `dist/`
@@ -166,3 +166,15 @@ The Git bundle preserves history separately. No project milestones remain.
 
 Runtime checks use CPython 3.14.4; Python 3.11 is the syntax/type-check target.
 The historical Day 2 graph is a labeled supplement, not current release evidence.
+
+## Final requirements alignment (v1.0.2)
+
+- [x] Source and installed import package use `src/treemap/` and `treemap`.
+- [x] `docs/REQUIREMENTS.md` contains the complete acceptance criteria and evidence matrix.
+- [x] Imports, examples, configuration, documentation links, and graph paths use the final names.
+- [x] Benchmarks were repeated against the renamed source; analysis and the two-page evaluation use the new measurements.
+- [x] The full regression suite, lint, formatting, static typing, dependency checks, and clean wheel installation passed.
+- [x] The final branch and release tags are synchronized with GitHub at delivery.
+
+The 23 planned milestone commits are preserved; subsequent corrections align the
+submission with the final supplied checklist. The current release is `v1.0.2`.

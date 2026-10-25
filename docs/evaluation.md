@@ -20,7 +20,7 @@ Sorted insertion creates a chain with h = n − 1 and linear searches. Child ref
 
 ## Performance Comparison
 
-Project measurements used nine repetitions of 4,000 queries, two warmups, and identical seeded workloads. At 1,000 entries, median batch means for TreeMap/ListMap hits were 0.281/7.250 microseconds with median-first insertion and 10.708/6.605 with sorted insertion. Heights were 9 and 999. Favorable structure supported fast lookup; a chain could lose to sequential search. Single-machine batch means do not establish universal speed ratios.
+Project measurements used nine repetitions of 4,000 queries, two warmups, and identical seeded workloads. At 1,000 entries, median batch means for TreeMap/ListMap hits were 0.313/7.321 microseconds with median-first insertion and 17.305/8.531 with sorted insertion. Heights were 9 and 999. Favorable structure supported fast lookup; a chain could lose to sequential search. Single-machine batch means do not establish universal speed ratios.
 
 ## Real-World Applications
 

@@ -32,7 +32,7 @@ Environment:
 | Processor identifier | AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD |
 | Logical processors | 24 |
 | Clock | QueryPerformanceCounter(); resolution 1e-07 s |
-| Benchmark/source revision | `7cce68990656d0435c377d47568a27318ba65621` (commit 19) |
+| Benchmark/source revision | `b0a20d4926824ff5b18b2ed720dff4f5c0ca5b07` (package-alignment commit) |
 
 The metadata contains the configuration, timestamp, raw-byte SHA-256 hashes of the benchmark/map source files, and hashes of both CSV artifacts. Those hashes identify the measured files; source hashes can change if line endings are rewritten. `.gitattributes` preserves CSV bytes across Git checkout. Subsequent documentation and packaging commits add evidence without changing the measured lookup implementation.
 
@@ -42,14 +42,14 @@ All times below are microseconds per lookup, converted from the unrounded nanose
 
 | Items | Insertion order | BST height | TreeMap hit | ListMap hit | TreeMap miss | ListMap miss |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: |
-| 50 | Median-first | 5 | 0.165 | 0.393 | 0.196 | 0.712 |
-| 100 | Median-first | 6 | 0.192 | 0.626 | 0.218 | 1.226 |
-| 500 | Median-first | 8 | 0.252 | 3.542 | 0.261 | 7.286 |
-| 1,000 | Median-first | 9 | 0.281 | 7.250 | 0.294 | 14.677 |
-| 50 | Sorted | 49 | 0.593 | 0.334 | 0.606 | 0.651 |
-| 100 | Sorted | 99 | 1.188 | 0.698 | 1.149 | 1.210 |
-| 500 | Sorted | 499 | 5.454 | 3.319 | 5.432 | 6.614 |
-| 1,000 | Sorted | 999 | 10.708 | 6.605 | 10.873 | 12.935 |
+| 50 | Median-first | 5 | 0.173 | 0.379 | 0.193 | 0.673 |
+| 100 | Median-first | 6 | 0.195 | 0.672 | 0.237 | 1.279 |
+| 500 | Median-first | 8 | 0.263 | 3.639 | 0.287 | 7.431 |
+| 1,000 | Median-first | 9 | 0.313 | 7.321 | 0.332 | 20.466 |
+| 50 | Sorted | 49 | 0.584 | 0.353 | 0.611 | 0.650 |
+| 100 | Sorted | 99 | 1.143 | 0.655 | 1.156 | 1.258 |
+| 500 | Sorted | 499 | 5.465 | 3.418 | 5.489 | 6.488 |
+| 1,000 | Sorted | 999 | 17.305 | 8.531 | 15.145 | 17.839 |
 
 ![Search-time medians and observed batch ranges](../results/benchmark_chart.png)
 
@@ -57,9 +57,9 @@ The chart uses a logarithmic time axis. Points show median batch means; shaded b
 
 ## Findings and interpretation
 
-At 1,000 entries with median-first insertion, TreeMap took 0.281 microseconds for hits versus ListMap's 7.250, a ratio of 25.76 between ListMap and TreeMap times. For misses the ratio was 49.93. The controlled tree height was only 9.
+At 1,000 entries with median-first insertion, TreeMap took 0.313 microseconds for hits versus ListMap's 7.321, a ratio of 23.42 between ListMap and TreeMap times. For misses the ratio was 61.70. The controlled tree height was only 9.
 
-With sorted insertion, height reached 999. Successful TreeMap searches took 10.708 microseconds versus 6.605 for ListMap, so ListMap was about 1.62 times faster for hits. Successful TreeMap lookups were 38.04 times slower than with median-first insertion. Sorted TreeMap still beat ListMap on the mixed miss workload by about 1.19 times; a key below the root fails immediately in that chain, so not every miss traverses its full height.
+With sorted insertion, height reached 999. Successful TreeMap searches took 17.305 microseconds versus 8.531 for ListMap, so ListMap was about 2.03 times faster for hits. Successful TreeMap lookups were 55.35 times slower than with median-first insertion. Sorted TreeMap still beat ListMap on the mixed miss workload by about 1.18 times; a key below the root fails immediately in that chain, so not every miss traverses its full height.
 
 Across all tested sizes, median-first TreeMap won hits and misses. ListMap won hits against the sorted chain, including at 50 entries. This run did not identify a size where ListMap beats the deliberately balanced tree. Small-dataset constant factors can make a list competitive, but no universal crossover point is supported by these four sizes.
 
@@ -71,14 +71,16 @@ Observed range at 1,000 entries (µs per search in each batch):
 
 | Order | Search | Map | Minimum | Median | Maximum | IQR |
 | --- | --- | --- | ---: | ---: | ---: | ---: |
-| Median-first | hit | TreeMap | 0.275 | 0.281 | 0.301 | 0.012 |
-| Median-first | hit | ListMap | 7.000 | 7.250 | 7.491 | 0.262 |
-| Median-first | miss | TreeMap | 0.288 | 0.294 | 0.303 | 0.007 |
-| Median-first | miss | ListMap | 14.556 | 14.677 | 15.042 | 0.256 |
-| Sorted | hit | TreeMap | 10.390 | 10.708 | 11.374 | 0.202 |
-| Sorted | hit | ListMap | 6.260 | 6.605 | 6.868 | 0.189 |
-| Sorted | miss | TreeMap | 10.305 | 10.873 | 12.897 | 0.655 |
-| Sorted | miss | ListMap | 12.714 | 12.935 | 13.874 | 0.099 |
+| Median-first | hit | TreeMap | 0.294 | 0.313 | 0.321 | 0.007 |
+| Median-first | hit | ListMap | 7.234 | 7.321 | 7.458 | 0.155 |
+| Median-first | miss | TreeMap | 0.304 | 0.332 | 0.792 | 0.417 |
+| Median-first | miss | ListMap | 14.839 | 20.466 | 31.450 | 9.053 |
+| Sorted | hit | TreeMap | 10.785 | 17.305 | 22.320 | 5.065 |
+| Sorted | hit | ListMap | 6.876 | 8.531 | 14.245 | 2.460 |
+| Sorted | miss | TreeMap | 10.988 | 15.145 | 26.253 | 6.612 |
+| Sorted | miss | ListMap | 13.769 | 17.839 | 21.032 | 3.652 |
+
+The 1,000-item cases show substantial batch-to-batch variation in this run, particularly for misses and sorted trees; the reported ratios should be interpreted alongside those ranges.
 
 These are repeated batches in one process on one Windows machine and Python version. They do not represent independent machines or process-level replications. OS scheduling, CPU frequency/power state, cache behavior, Python specialization, and background activity can change timings; CPU affinity and power settings were not controlled. Warmups, medians, shuffled measurement order, and recorded ranges reduce or reveal some variation but do not eliminate it.
 

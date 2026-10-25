@@ -1,5 +1,4 @@
-# Installed environment for Treemap 1.0.1 final verification and benchmark reproduction.
-# Naming correction only; published benchmark source hashes and measurements are unchanged.
+# Installed environment for TreeMap 1.0.2 release verification and the repeated benchmark.
 ast_serialize==0.13.1
 build==1.6.1
 charset-normalizer==3.5.2
@@ -38,6 +37,6 @@ reportlab==5.1.0
 ruff==0.17.2
 six==1.17.0
 tabulate==0.10.0
-treemap==1.0.1
+treemap==1.0.2
 typing_extensions==4.16.0
 tzdata==2026.5

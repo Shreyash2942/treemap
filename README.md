@@ -81,7 +81,7 @@ treemap/
 │   └── demo.py
 ├── docs/
 │   ├── IMPLEMENTATION_PLAN.md
-│   ├── requirements.md
+│   ├── REQUIREMENTS.md
 │   ├── architecture.md
 │   ├── performance_analysis.md
 │   ├── evaluation.md

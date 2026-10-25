@@ -1,8 +1,8 @@
 {
-  "validated_at_utc": "2026-10-25T16:51:08.786375+00:00",
+  "validated_at_utc": "2026-10-25T17:00:32.356376+00:00",
   "passed": true,
   "name": "treemap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "validation_python": "3.14.4",
   "evaluation": {
     "pages": 2,
@@ -14,11 +14,11 @@
   "benchmarks": {
     "summary_cases": 32,
     "raw_samples": 288,
-    "source_revision": "7cce68990656d0435c377d47568a27318ba65621",
+    "source_revision": "b0a20d4926824ff5b18b2ed720dff4f5c0ca5b07",
     "hashes_verified": true,
     "all_statistics_reconstructed": true
   },
   "local_links_checked": 48,
-  "required_files_checked": 14,
+  "required_files_checked": 26,
   "regression_tests": 213
 }
