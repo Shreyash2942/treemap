@@ -1,13 +1,11 @@
-include README.md guidme.md CHANGELOG.md pyproject.toml .gitattributes .gitignore .graphifyignore
+include README.md guidme.md CHANGELOG.md pyproject.toml .gitattributes .gitignore
 recursive-include src *.py py.typed
 recursive-include tests *.py
 recursive-include benchmarks *.py
 recursive-include examples *.py
 recursive-include scripts *.py
-recursive-include docs *.md *.pdf *.txt *.docx *.png
+recursive-include docs *.md *.pdf *.txt *.docx
 include results/performance_results.csv results/benchmark_samples.csv
 include results/benchmark_metadata.json results/benchmark_chart.png
 include results/benchmark_environment.txt results/pytest_results.xml results/final_validation.json
-include graphify-out/graph.html graphify-out/graph.json graphify-out/GRAPH_REPORT.md
-include graphify-out/cost.json graphify-out/manifest.json graphify-out/retrieval_benchmark.json
 global-exclude *.py[cod]

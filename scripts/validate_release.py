@@ -127,7 +127,7 @@ def validate_benchmarks(root: Path) -> dict:
 
 def validate_local_links(root: Path) -> int:
     checked = 0
-    for document in [root / "README.md", *sorted((root / "docs").rglob("*.md"))]:
+    for document in [*sorted(root.glob("*.md")), *sorted((root / "docs").rglob("*.md"))]:
         for target in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", document.read_text(encoding="utf-8")):
             target = target.strip("<>")
             if "://" in target or target.startswith(("#", "mailto:")):
@@ -156,7 +156,10 @@ def validate_release(root: Path) -> dict:
         "docs/architecture.md",
         "docs/performance_analysis.md",
         "docs/REQUIREMENTS.md",
-        "docs/IMPLEMENTATION_PLAN.md",
+        "CHANGELOG.md",
+        "guidme.md",
+        "docs/project_report.pdf",
+        "docs/project_report.docx",
         "docs/evaluation.md",
         "docs/evaluation.pdf",
         "docs/evaluation_sources.md",

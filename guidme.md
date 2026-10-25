@@ -475,11 +475,12 @@ metadata. Running the benchmark without `--output` replaces published files in
 | [README.md](README.md) | Project overview and compact API reference |
 | [Architecture](docs/architecture.md) | Class responsibilities, dependencies, and design decisions |
 | [Requirements](docs/REQUIREMENTS.md) | Full completion checklist and evidence matrix |
-| [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Four-day milestones and completion evidence |
+| [Changelog](CHANGELOG.md) | Milestone history and cleanup decisions |
 | [Performance analysis](docs/performance_analysis.md) | Measured results, theory, and limitations |
 | [Evaluation PDF](docs/evaluation.pdf) | Two-page academic evaluation |
 | [Evaluation source](docs/evaluation.md) | Editable Markdown for the evaluation |
-| [Submission guide](docs/SUBMISSION.md) | Release artifacts and submission instructions |
+| [Expanded report PDF](docs/project_report.pdf) | 18-page APA-style project report |
+| [Expanded report Word file](docs/project_report.docx) | Editable report; export a revised PDF after changes |
 
 Open the existing PDF directly; no PDF generation dependency is needed to read it.
 To rebuild it from the Markdown source:
@@ -497,10 +498,9 @@ check. To save page images for inspection:
 python scripts/build_evaluation.py --preview-dir dist/evaluation-preview
 ```
 
-The optional [interactive knowledge graph](graphify-out/graph.html) can be opened
-in a browser. It describes the historical Day 2 snapshot, with updated names and
-paths; it does not represent the final implementation or prove correctness.
-Graphify is not needed to install or use the library.
+The expanded report is maintained as an editable Word document and a PDF.
+Open the Word file to make changes, then export it to PDF. Shared citation and
+formatting notes are in [evaluation_sources.md](docs/evaluation_sources.md).
 
 ## 13. Build an installable package
 
@@ -527,11 +527,20 @@ The final command prints `hello`. On macOS/Linux, use
 `build/wheel-env/bin/python` instead of `.\build\wheel-env\Scripts\python.exe`.
 The wheel environment is under `build/`, which the project's `.gitignore` excludes.
 
-Source ZIP and Git-history bundle generation is a maintainer workflow described
-in [the submission guide](docs/SUBMISSION.md). Its script requires a clean Git
-checkout, a tag matching the package version, and that tag pointing to `HEAD`.
-A later documentation commit may be ahead of the original release tag; that
-is expected and does not prevent using the library or building a wheel.
+After committing the intended project files, create a clean source ZIP and
+an optional history bundle using standard Git commands:
+
+```bash
+git archive --format=zip --prefix=treemap/ --output=dist/treemap-submission.zip HEAD
+git bundle create dist/treemap-history.bundle --all
+```
+
+The ZIP excludes untracked environments, caches, and local build output. The
+bundle preserves history and tags; restore it with
+`git clone dist/treemap-history.bundle restored-treemap`. These commands require
+a Git checkout, while library use and package installation also work from an
+extracted source archive. Earlier release tags describe historical snapshots;
+the current branch includes the cleanup and the latest documentation.
 
 ## 14. Troubleshooting
 
@@ -551,7 +560,6 @@ is expected and does not prevent using the library or building a wheel.
 | A sorted-input tree is unbalanced | This is expected for an ordinary BST; analysis detects imbalance but does not rebalance it. |
 | Benchmark times differ from the report | Compare the workload and environment; fixed seeds do not fix elapsed time. |
 | Release validation reports a source/hash mismatch | Check whether measured source or evidence changed; restore the matching snapshot or rerun benchmarks and update their analysis. Do not change hashes merely to hide a mismatch. |
-| Submission script rejects the checkout | Review its clean-tree, version, and tag-at-HEAD requirements in the submission guide. A downloaded ZIP has no Git repository. |
 
 ## 15. Suggested first-use checklist
 

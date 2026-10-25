@@ -1,39 +1,60 @@
-# Evaluation sources and formatting decisions
+# Academic sources and editing notes
 
-The evaluation uses third-person analytical prose and attributes external
-claims with APA-style author/date citations. References are alphabetized and
-use hanging indents. References count within the requested two pages; no
-separate title page, fictional author, or invented student details are added.
+The two-page evaluation and expanded report use third-person analytical prose,
+APA-style author/date citations, alphabetized references, and hanging indents.
+The expanded report omits the author name as requested; no student details,
+instructor name, or due date were invented.
 
-Primary sources verified on October 25, 2026:
+## Retained documents
+
+- [Two-page evaluation PDF](evaluation.pdf), rebuilt from [evaluation.md](evaluation.md).
+- [Expanded report PDF](project_report.pdf): 18 pages, including 10 main-body pages.
+- [Editable expanded report](project_report.docx): open in a compatible Word processor,
+  make changes, and export to PDF. Both figures are embedded in the document.
+
+The expanded report assesses the original validated version 1.0.2 snapshot.
+Its 63 requirement/deliverable identifiers and 12 success criteria describe
+that evidence. The later cleanup removed the separate implementation-plan
+and submission-guide documents at the user's request; the current D-16
+milestone record is in CHANGELOG and Git history. Historical document paths
+in the report remain recoverable from the original release history.
+
+## Sources
+
+Primary sources were verified on October 25, 2026:
 
 - Sedgewick and Wayne's [BST chapter](https://algs4.cs.princeton.edu/32bst/)
-  supports ordered-search structure, successor deletion, and height-dependent
-  complexity. The [publisher's catalog](https://www.pearson.com/en-gb/subject-catalog/p/algorithms/P200000000597/9780132762564)
-  and [Princeton course description](https://algs4.cs.princeton.edu/home/CS2013-final-report.pdf)
-  verify the 2011 fourth edition and Addison-Wesley Professional attribution.
-- The Python Software Foundation's [versioned documentation](https://docs.python.org/3.14/library/sys.html#sys.getrecursionlimit)
-  supports the finite interpreter recursion limit. The source has no explicit
-  publication date for that page, so its reference uses `n.d.`.
+  supports the theoretical background. The [publisher's record](https://www.pearson.com/en-gb/subject-catalog/p/algorithms/P200000000597)
+  verifies *Algorithms*, fourth edition, 2011, Addison-Wesley Professional.
+- The Python Software Foundation's [versioned sys documentation](https://docs.python.org/3.14/library/sys.html#sys.getrecursionlimit)
+  supports the interpreter recursion-limit discussion; its reference uses `n.d.`.
 - The PostgreSQL Global Development Group's [version 18 documentation](https://www.postgresql.org/docs/18/btree.html)
-  identifies its index as a balanced, multiway B-tree. It is used as a related
-  application, with an explicit distinction from this project's ordinary BST.
-  Its undated documentation reference also uses `n.d.`.
+  describes a balanced, multiway B-tree, explicitly distinguished from this
+  project's ordinary BST. Its undated reference uses `n.d.`.
+- APA's [Student Paper Setup Guide](https://apastyle.apa.org/instructional-aids/student-paper-setup-guide.pdf)
+  supplies the formatting conventions. Omitting unsupplied title-page details
+  is the requested adaptation for the expanded report.
+- The [versioned project repository](https://github.com/Shreyash2942/treemap/tree/v1.0.2)
+  is cited as software in the expanded report, without a named author.
 
-Project performance findings are original measurements from
-`results/performance_results.csv`, with full method and limits in
-`performance_analysis.md`; they are not attributed to the external sources.
+The reports paraphrase their external sources. Implementation behavior,
+213-test evidence, and benchmark findings come from the project itself.
+Published measurements are retained in `results/performance_results.csv`,
+with 288 samples and methodology in [performance_analysis.md](performance_analysis.md).
+The cleanup does not replace those measurements or claim exhaustive proof.
 
-Regeneration:
+## Rebuild the two-page evaluation
 
 ```bash
 python -m pip install -e ".[docs]"
 python scripts/build_evaluation.py
-python scripts/build_evaluation.py --preview-dir dist/evaluation_preview
 ```
 
-The builder checks that the PDF contains exactly two substantive, text-readable
-pages. It uses US Letter paper, one-inch margins, 12-point Times, double-spaced
-paragraphs, page numbers, and hanging references. Installed Times New Roman
-fonts are embedded on Windows; standard PDF Times is the fallback elsewhere.
-The editable Markdown and generated PDF retain the same wording.
+Optional page previews: add `--preview-dir dist/evaluation-preview`.
+The builder enforces two substantive pages, uses 12-point Times, double
+spacing, one-inch margins, page numbers, and hanging references. Times New
+Roman is embedded when available; standard PDF Times is the fallback.
+
+The expanded report is maintained in Word and exported as PDF. Its duplicate
+Markdown, standalone figure copies, and custom generator were removed during
+cleanup. Review content, measured values, references, and pagination after edits.

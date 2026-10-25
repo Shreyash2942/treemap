@@ -39,7 +39,6 @@ third-party runtime dependencies. The `dev` extra supplies pytest, Ruff, mypy,
 package-build tools, and Matplotlib for the complete validation workflow.
 The `docs` extra supplies PDF generation and inspection tools. Runtime checks
 use the available CPython 3.14.4 interpreter; mypy targets Python 3.11 syntax.
-Graphify is an optional, separate analysis tool.
 
 ## Repository structure
 
@@ -80,7 +79,6 @@ treemap/
 ├── examples/
 │   └── demo.py
 ├── docs/
-│   ├── IMPLEMENTATION_PLAN.md
 │   ├── REQUIREMENTS.md
 │   ├── architecture.md
 │   ├── performance_analysis.md
@@ -90,7 +88,7 @@ treemap/
 ├── results/
 │   ├── performance_results.csv
 │   └── benchmark_chart.png
-├── scripts/                  # PDF generation, release validation, submission archive
+├── scripts/                  # Two-page PDF generation and evidence validation
 ├── pyproject.toml
 ├── .gitattributes
 ├── .gitignore
@@ -330,33 +328,18 @@ example [before deletion](docs/diagrams/tree_before.txt) and
 
 ## Documentation
 
-Detailed planning and project evidence are maintained separately from this README:
+Project documentation and evidence:
 
-- [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — four-day tasks, quality gates, and commit schedules.
+- [`CHANGELOG.md`](CHANGELOG.md) - development milestones and cleanup decisions.
 - [`docs/REQUIREMENTS.md`](docs/REQUIREMENTS.md) — requirement-to-evidence traceability.
 - [`docs/architecture.md`](docs/architecture.md) — module design and core interfaces.
 - [`docs/performance_analysis.md`](docs/performance_analysis.md) — executed benchmark methodology, results, and limits.
 - [`docs/evaluation.pdf`](docs/evaluation.pdf) — two-page academic evaluation, including APA-style citations and references.
 - [`docs/evaluation.md`](docs/evaluation.md) — editable evaluation source.
+- [`docs/evaluation_sources.md`](docs/evaluation_sources.md) - shared citation and report-editing notes.
 - [`docs/project_report.pdf`](docs/project_report.pdf) — expanded APA-style report covering implementation, evidence, and all success criteria.
 - [`docs/project_report.docx`](docs/project_report.docx) — editable Word report with no author name.
-- [`docs/project_report_sources.md`](docs/project_report_sources.md) — report sources, formatting decisions, and rebuild instructions.
-- [`docs/SUBMISSION.md`](docs/SUBMISSION.md) — validation and release-artifact guide.
 - [`docs/diagrams/`](docs/diagrams/) — reproducible before-and-after tree diagrams.
-
-## Project knowledge graph
-
-Graphify outputs are available in [`graphify-out/`](graphify-out/):
-
-- [`graph.html`](graphify-out/graph.html) — interactive architecture graph; open in a browser.
-- [`graph.json`](graphify-out/graph.json) — graph data with sources and confidence labels.
-- [`GRAPH_REPORT.md`](graphify-out/GRAPH_REPORT.md) — communities, cohesion, connections, and audit limitations.
-
-The checked-in graph is the **Day 2 snapshot**, before ListMap, the renderer,
-and the benchmark were implemented. It is not a current Day 3 architecture graph
-or a correctness proof; re-run graphify to refresh it.
-Graph labels and paths use the current project and package names; the Day 2 relationships are unchanged.
-Graphify's token counters are unavailable here; no measured token cost is claimed.
 
 ## Completion criteria
 
@@ -378,10 +361,18 @@ Times New Roman fonts are embedded when available; standard PDF Times fonts
 are the portable fallback. The two-page limit includes references, with no
 separate title page or invented student details.
 
-After the release tag exists, `python scripts/build_submission.py --tag v1.0.2`
-creates the source ZIP, Git-history bundle, and SHA-256 manifest in `dist/`.
-The archive is built from committed files, so virtual environments and caches
-are excluded. The bundle preserves all milestone commits and the release tag.
+Create a source ZIP and optional history bundle from a committed checkout:
+
+```bash
+git archive --format=zip --prefix=treemap/ --output=dist/treemap-submission.zip HEAD
+git bundle create dist/treemap-history.bundle --all
+```
+
+The ZIP contains committed project files, excluding virtual environments and
+caches. Historical release tags remain available; the cleanup is on the current
+branch. The 18-page report describes the validated 1.0.2 snapshot and is editable
+in Word. The separate implementation-plan and submission-guide documents were
+removed at the user's request; milestone evidence is retained in Git and CHANGELOG.
 
 ## Future improvements
 

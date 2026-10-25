@@ -1,5 +1,5 @@
 {
-  "validated_at_utc": "2026-10-25T17:00:32.356376+00:00",
+  "validated_at_utc": "2026-10-25T23:56:28.250169+00:00",
   "passed": true,
   "name": "treemap",
   "version": "1.0.2",
@@ -18,7 +18,7 @@
     "hashes_verified": true,
     "all_statistics_reconstructed": true
   },
-  "local_links_checked": 48,
-  "required_files_checked": 26,
+  "local_links_checked": 55,
+  "required_files_checked": 29,
   "regression_tests": 213
 }

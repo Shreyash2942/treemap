@@ -71,7 +71,7 @@ def test_broken_documentation_link_is_detected(tmp_path):
         validate_local_links(tmp_path)
 
 
-def test_readme_python_examples_execute(capsys):
+def test_readme_python_examples_execute():
     namespace = {"__name__": "readme_example"}
     source = (ROOT / "README.md").read_text(encoding="utf-8")
     snippets = re.findall(r"```python\n(.*?)```", source, re.S)

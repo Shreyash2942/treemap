@@ -131,4 +131,4 @@ Artifacts:
 - [PNG chart](../results/benchmark_chart.png)
 - [Before](diagrams/tree_before.txt) and [after](diagrams/tree_after.txt) diagram files
 
-The graphify files remain the explicitly labeled Day 2 architecture snapshot. Their retrieval-token estimates are unrelated to these Day 3 search timings. The completed [two-page evaluation](evaluation.pdf) uses these final measurements; its [editable source](evaluation.md) and [source notes](evaluation_sources.md) are included.
+The completed [two-page evaluation](evaluation.pdf) uses these final measurements; its [editable source](evaluation.md) and [source notes](evaluation_sources.md) are included.

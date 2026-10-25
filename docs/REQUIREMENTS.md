@@ -2,7 +2,9 @@
 
 ## Project Completion Requirements and Success Criteria
 
-Release: **v1.0.2**. Checkmarks refer to the completed release; GitHub branch and tag synchronization is verified at delivery.
+Release evidence: **v1.0.2**. The current branch contains the subsequent cleanup.
+
+**Cleanup scope adjustment:** The standalone implementation-plan and submission-guide documents were removed at the user's request. Requirement D-16 now uses `CHANGELOG.md` and Git milestone history as its evidence. The expanded academic report describes the original validated 1.0.2 snapshot; its historical deliverable paths remain available through Git history.
 
 **Project Name:** TreeMap
 **Project Type:** Data Structures and Algorithms
@@ -134,7 +136,6 @@ treemap/
 │   └── demo.py
 │
 ├── docs/
-│   ├── IMPLEMENTATION_PLAN.md
 │   ├── REQUIREMENTS.md
 │   ├── architecture.md
 │   ├── performance_analysis.md
@@ -334,7 +335,7 @@ The target is 23 planned commits. Additional meaningful commits are acceptable w
 | D-13 | Performance analysis         | `docs/performance_analysis.md`               |
 | D-14 | Two-page evaluation          | `docs/evaluation.pdf`                        |
 | D-15 | Architecture documentation   | `docs/architecture.md`                       |
-| D-16 | Implementation plan          | `docs/IMPLEMENTATION_PLAN.md`                |
+| D-16 | Development milestone record | `CHANGELOG.md` and Git history |
 | D-17 | Completion requirements      | `docs/REQUIREMENTS.md`                       |
 | D-18 | Main README                  | `README.md`                                  |
 
@@ -462,7 +463,7 @@ The complete project must be installable, executable, testable, and reproducible
 
 * [x] Main README completed.
 * [x] Architecture documentation completed.
-* [x] Implementation plan completed.
+* [x] Development milestone record retained in CHANGELOG and Git history.
 * [x] Requirements document completed.
 * [x] Tree diagrams generated.
 * [x] Traversal examples documented.
@@ -536,10 +537,9 @@ equality and a stable total ordering. Values may include `None`.
 | Class responsibilities and dependencies | `docs/architecture.md` | Dependency overview, contracts, complexity, design decisions |
 | Two-page analytical academic evaluation | `docs/evaluation.md`, `evaluation.pdf` | Third-person prose, source citations, references, PDF page-count check |
 | Complete regression and code quality | Tests, Ruff, mypy | JUnit XML and final validation report |
-| Clean, reproducible submission and history | Packaging scripts, Git tag `v1.0.2` | Source ZIP, history bundle, wheel/sdist, SHA-256 manifest |
+| Clean, reproducible submission and history | Standard Python/Git commands in README, historical release tags | Source ZIP, history bundle, wheel/sdist, clean-install verification |
 
 The evaluation's two-page limit includes its references. It uses APA-style
 author/date citations and hanging references without a separate title page,
-because student identity/title-page details were not supplied. The graphify
-artifacts are an explicitly labeled historical Day 2 snapshot, not final
-correctness or performance evidence.
+because student identity/title-page details were not supplied. The expanded
+report is retained as PDF and editable Word; its figures are embedded in those files.

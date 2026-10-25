@@ -1,4 +1,4 @@
-"""Run the Day 1 and Day 2 examples with `python examples/demo.py`."""
+"""Demonstrate BST operations, traversals, balance, Maps, and ASCII diagrams."""
 
 from treemap import BinarySearchTree, TreeMap
 from treemap.core import analyze_balance, inorder, postorder, preorder

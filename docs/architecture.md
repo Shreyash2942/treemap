@@ -191,11 +191,11 @@ Pytest adds the repository root to its test import path so the standalone
 `pytest` command can import the benchmark module just like `python -m pytest`.
 The runtime `treemap` package still comes from the installed `src/` package.
 
-## Knowledge graph
+## Maintained support tools
 
-The graphify skill generated `graphify-out/graph.html`, `graph.json`, and
-`GRAPH_REPORT.md` as a Day 2 snapshot of the code and documents, before the Day 3
-modules above existed. Refresh graphify to include the current implementation.
-The graph is an architecture aid, with extracted/inferred confidence labels and numeric
-community cohesion scores. Token usage is unavailable in this environment;
-the audit records that limitation rather than claiming a measured zero cost.
+`scripts/build_evaluation.py` rebuilds the required two-page PDF from its
+Markdown source. `scripts/validate_release.py` checks required files, document
+links, the regression report, and benchmark hashes/statistics. Both tools
+support the submitted deliverables; package building and source archiving use
+standard Python and Git commands. The expanded report is edited in Word and
+exported to PDF, so it needs no custom report-generation script.
