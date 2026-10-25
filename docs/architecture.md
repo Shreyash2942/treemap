@@ -91,16 +91,62 @@ traversal space; their keys and values remain references to the stored objects.
 They are not live views or deep copies. TreeMap inherits the BST's key contract,
 comparison errors, and unbalanced worst-case O(n) lookup/mutation behavior.
 
-## Later modules
+## Day 3 ListMap and visualization
 
-ListMap will provide the benchmark baseline. ASCII rendering, reproducible
-benchmarks, performance analysis, and evaluation artifacts remain future work.
-The reserved ListMap and renderer modules contain docstrings only.
+`maps/list_map.py` stores `(key, value)` tuples in a list in insertion order.
+`get` checks equality sequentially and returns on the first match; `put`
+replaces the value of an equal key while retaining the original key, or appends
+a new entry. `remove` scans and removes an entry, raising `KeyError` if absent.
+All three operations are O(n), `len` is O(1), and sorted collection snapshots
+are O(n log n). Values and default semantics match TreeMap. Keys must satisfy
+the shared total-order contract; invalid mixed types can fail at different
+points because ListMap equality lookup does not need the BST's `<` comparisons.
+
+`visualization/tree_renderer.py` exposes `render_tree(root, show_values=False)`.
+It returns `(empty)` for no root, otherwise emits the root followed by L/R
+branches with ASCII connectors, left before right. `ascii()` escapes keys and
+optional values to one line. Stable representations are required for repeatable
+labels. The renderer never mutates nodes and uses an explicit stack, including
+for deep trees. Time and storage depend on emitted text: long chains can require
+O(n*h) characters of indentation. The traversal stack has O(h) entries, whose
+prefix strings also contribute storage; this is not a compact layout algorithm.
+
+## Day 3 benchmark and evidence
+
+`benchmarks/benchmark_search.py` is a standalone command against the installed
+package. It creates even integer keys, builds both maps with the same entries
+in the same insertion order, and uses seeded hit/miss workloads. Median-first
+insertion produces a controlled balanced shape; sorted insertion produces a
+right chain. Misses cover below-minimum, interior-gap, and above-maximum keys.
+Stored `None` values are included, and default-sentinel identity is validated
+before timing so a missing lookup cannot masquerade as a stored `None`.
+
+Only prebound public `get(key, default)` calls and their Python loop are timed
+with `perf_counter_ns`. Building maps, generating queries, correctness checks,
+height calculation, and output generation are outside timing. Garbage collection
+is disabled during measurement and restored afterward. Each cell warms up,
+then measures both maps in a seeded shuffled order for every repetition.
+
+The summary CSV reports the median of batch means, minimum, maximum, and IQR.
+Raw CSV retains query counts and total elapsed nanoseconds so every statistic
+can be reconstructed. Metadata records interpreter/platform, timer, configuration,
+Git revision, and SHA-256 source/result hashes. `.gitattributes` preserves exact
+CSV bytes across Git checkout. Plotting is optional via the `benchmark` extra;
+Matplotlib is imported only when creating the PNG. Neither map needs it at runtime.
+
+The full run and constraints are documented in `performance_analysis.md`.
+`results/pytest_results.xml` records the full 204-case regression run. The two-page
+evaluation remains the final milestone.
+
+Pytest adds the repository root to its test import path so the standalone
+`pytest` command can import the benchmark module just like `python -m pytest`.
+The runtime `bst_map` package still comes from the installed `src/` package.
 
 ## Knowledge graph
 
-The graphify skill generates `graphify-out/graph.html`, `graph.json`, and
-`GRAPH_REPORT.md` from the implemented code and project documents. The graph is
-an architecture aid, with extracted/inferred confidence labels and numeric
+The graphify skill generated `graphify-out/graph.html`, `graph.json`, and
+`GRAPH_REPORT.md` as a Day 2 snapshot of the code and documents, before the Day 3
+modules above existed. Refresh graphify to include the current implementation.
+The graph is an architecture aid, with extracted/inferred confidence labels and numeric
 community cohesion scores. Token usage is unavailable in this environment;
 the audit records that limitation rather than claiming a measured zero cost.

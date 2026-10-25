@@ -29,9 +29,15 @@ coverage.xml
 graphify-out/.*
 graphify-out/cache/
 
-# Generated benchmark artifacts (retain the directory)
+# Keep the reviewed Day 3 evidence; ignore other generated result files.
 results/*
 !results/.gitkeep
+!results/performance_results.csv
+!results/benchmark_samples.csv
+!results/benchmark_metadata.json
+!results/benchmark_chart.png
+!results/benchmark_environment.txt
+!results/pytest_results.xml
 
 # Editor and OS artifacts
 .vscode/

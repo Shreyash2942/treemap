@@ -90,8 +90,54 @@ reference. Three seeded map workloads each start with 100 keys, then perform
 The graph report separates extracted/inferred links and discloses unavailable
 token counters. Graphify is installed separately from the project's `.venv`.
 
+## Day 3: Testing, visualization, and performance (M3 complete)
+
+Validate six explicit datasets, produce diagrams, implement sequential ListMap,
+and run equivalent search workloads on both maps with reproducible evidence.
+
+Commit schedule:
+
+13. `test: add diverse 50-item datasets`
+14. `test: expand edge-case and invariant coverage`
+15. `feat: add ASCII tree visualization`
+16. `feat: implement list-based comparison Map`
+17. `perf: add reproducible search benchmarks`
+18. `docs: record performance findings and diagrams`
+
+M3 acceptance checklist:
+
+- [x] Six named scenarios cover random, sorted, reverse, string, mixed values,
+  and 50 replacement operations after a 50-key preload.
+- [x] Strict bounds and size are checked after mutations in selected sequences.
+- [x] Empty/missing keys, repeated deletions, and reuse after emptying are covered.
+- [x] Iterative ASCII rendering generates the actual before/after diagrams.
+- [x] Sequential ListMap has equivalent value/default/update semantics for valid keys.
+- [x] Benchmarks use 50/100/500/1,000 entries, two tree shapes, and hit/miss queries.
+- [x] Seeds, warmups, repetitions, measurement order, and timed scope are explicit.
+- [x] Median results, 288 raw samples, environment/source hashes, and a PNG are saved.
+- [x] Performance analysis explains favorable shapes, degeneration, and limits.
+- [x] The complete 204-test regression suite and Ruff/dependency checks pass.
+- [x] Six additional commits exist (eighteen total).
+
+Validation on Python 3.14.4:
+
+| Check | Result |
+| --- | --- |
+| `python -m pytest -q --junitxml=results/pytest_results.xml` | 204 passed, no failures/errors/skips |
+| `pytest -q` | 204 passed; benchmark imports also work with the standalone entry point |
+| `python -m ruff check .` | Passed |
+| `python -m ruff format --check .` | Passed |
+| `python -m pip check` | No broken requirements |
+| `python examples/demo.py` | Actual before/after diagrams and existing examples passed |
+| `python benchmarks/benchmark_search.py` | 32 summary cells, 288 measured batches, PNG and metadata |
+
+The benchmark uses seed 506, 4,000 queries per sample, nine measured repetitions,
+and two warmups. Median-first tree heights are 5/6/8/9; sorted heights are
+49/99/499/999. Search results and limitations are recorded in
+`docs/performance_analysis.md`. The graphify artifacts intentionally remain
+the labeled Day 2 snapshot; graph refresh is not part of M3 acceptance.
+
 ## Remaining project scope
 
-The remaining features are ListMap, ASCII rendering, reproducible search
-benchmarks, performance analysis, and a two-page evaluation. These are later
-milestones; their detailed daily schedules have not yet been supplied.
+The two-page evaluation and final review remain. Their detailed daily schedule
+has not yet been supplied.

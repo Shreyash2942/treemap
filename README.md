@@ -2,7 +2,7 @@
 
 **A modular Python toolkit for Binary Search Trees and tree-based Maps.**
 
-> **Status:** Days 1 and 2 complete — BST, traversals, balance analysis, and TreeMap
+> **Status:** Days 1–3 complete — tested maps, tree diagrams, and measured benchmarks
 >
 > **Language:** Python 3.11+
 >
@@ -16,20 +16,20 @@ The implementation emphasizes modularity, clear interfaces, automated tests, and
 
 ## Features
 
-Implemented through Day 2:
+Implemented through Day 3:
 
 - **BST:** Insert, search, delete, find minimum/maximum, and preserve the BST ordering invariant.
 - **Generic nodes:** Comparable keys, unrestricted values, and typed child references.
 - **Traversal:** Iterative in-order, pre-order, and post-order node iterators.
 - **TreeMap:** Complete key-value API with sorted collections and stored `None` support.
 - **Balance analysis:** Height, root balance factor, overall balance, and unbalanced node keys.
-- **Validation:** 140 tests, including strict ancestor bounds, 50+ entries, deep trees, and seeded mutations compared with a dictionary.
+- **ListMap:** Sequential lookup with the same valid-key API as TreeMap.
+- **Visualization:** Deterministic ASCII diagrams before and after deletion.
+- **Benchmarking:** Reproducible hit/miss searches, raw samples, environment metadata, and a PNG chart.
+- **Validation:** 204 tests, including six explicit 50-item scenarios, strict ancestor bounds, deep trees, and dictionary comparisons.
 - **Development setup:** Installable package, virtual environment, pytest, Ruff, and a runnable example.
 
-Planned for later milestones:
-
-- **Visualization:** Render ASCII diagrams before and after tree modifications.
-- **Benchmarking:** Compare search operations in a BST-backed Map and a list-backed Map.
+Remaining: the two-page evaluation and final project review.
 
 ## Technology
 
@@ -62,6 +62,10 @@ treemap/
 │   ├── test_traversals.py
 │   ├── test_tree_map.py
 │   ├── test_balance.py
+│   ├── test_datasets.py
+│   ├── test_list_map.py
+│   ├── test_tree_renderer.py
+│   ├── test_benchmark_search.py
 │   └── test_edge_cases.py
 ├── benchmarks/
 │   └── benchmark_search.py
@@ -78,6 +82,7 @@ treemap/
 │   ├── performance_results.csv
 │   └── benchmark_chart.png
 ├── pyproject.toml
+├── .gitattributes
 ├── .gitignore
 └── README.md
 ```
@@ -99,6 +104,9 @@ source .venv/bin/activate
 
 # Install project and development dependencies
 python -m pip install -e ".[dev]"
+
+# Also install plotting support to generate the benchmark PNG
+python -m pip install -e ".[dev,benchmark]"
 ```
 
 On Windows, activation is optional: use `.venv\Scripts\python.exe` in place of
@@ -161,6 +169,12 @@ the key contract, node-reference behavior, and operation complexity.
 and raises `KeyError` if absent. `keys`, `values`, and `items` return new lists,
 ordered by key, containing references to the stored keys and values.
 
+`ListMap` is available from `bst_map` or `bst_map.maps.list_map`. It offers the
+same methods for valid, mutually comparable keys, storing entries in a list
+and scanning sequentially. Lookup/update/removal are O(n); sorted collections
+are O(n log n). TreeMap operations depend on tree height. Both retain stored
+`None` values and return the supplied default only for an absent key.
+
 ## Traversal example
 
 For insertion order `50, 30, 70, 20, 40, 60, 80`:
@@ -209,7 +223,7 @@ python -m pytest -v
 python -m ruff check .
 python -m ruff format --check .
 
-# Run the BST, traversal, balance, and TreeMap examples
+# Run the maps, algorithms, and before/after ASCII diagrams
 python examples/demo.py
 ```
 
@@ -224,13 +238,47 @@ balance validation against breadth-first reference heights, sorted map
 collections, stored `None` and defaults, and three seeded TreeMap workloads.
 Traversal, balance, and map integration tests also exceed the recursion limit.
 
-Validation passed with Python 3.14.4: **140 tests**, Ruff lint and format checks,
+Day 3 adds explicit 50-item random/sorted/reverse/string/mixed-value datasets,
+50 duplicate-key updates after preloading 50 keys, repeated deletions to empty,
+ListMap equivalence, golden tree diagrams, and benchmark-methodology tests.
+The committed [JUnit report](results/pytest_results.xml) records the full run.
+
+Validation passed with Python 3.14.4: **204 tests**, Ruff lint and format checks,
 dependency consistency, and the demo. Python 3.11 is the minimum supported syntax
 target; it has not been separately exercised in this environment.
 
 ## Performance evaluation
 
-The benchmark will compare equivalent search workloads in `TreeMap` and a simple list-backed `ListMap`, using dataset sizes of **50, 100, 500, and 1,000** items. Results will be recorded in `results/` after execution.
+The executed benchmark uses **50, 100, 500, and 1,000** entries, median-first
+and sorted insertion, and identical successful/unsuccessful queries for both
+maps. Each result is the median of nine batch means, with 4,000 queries per
+batch, two warmups, and fixed seed 506. Construction is outside timing.
+
+```bash
+python benchmarks/benchmark_search.py
+# Without the optional plotting dependency:
+python benchmarks/benchmark_search.py --no-chart
+```
+
+Measured on this machine with CPython 3.14.4:
+
+| 1,000 entries | TreeMap hit (µs) | ListMap hit (µs) | TreeMap miss (µs) | ListMap miss (µs) |
+| --- | ---: | ---: | ---: | ---: |
+| Median-first, height 9 | 0.283 | 7.099 | 0.340 | 15.879 |
+| Sorted, height 999 | 10.855 | 6.603 | 10.896 | 13.268 |
+
+These are per-lookup batch averages, not individual-operation latency
+percentiles. Balanced shape helped TreeMap here; ListMap won successful
+lookups against the sorted chain. See the [performance analysis](docs/performance_analysis.md)
+for all sizes, exact methodology, uncertainty, and limits.
+
+![Measured lookup times](results/benchmark_chart.png)
+
+Evidence: [summary CSV](results/performance_results.csv),
+[288 raw samples](results/benchmark_samples.csv),
+[environment and source hashes](results/benchmark_metadata.json), and
+[installed versions](results/benchmark_environment.txt). Re-running replaces
+the benchmark evidence in `results/`; exact timings vary with the environment.
 
 | Search structure | Typical behavior | Worst case |
 |---|---|---|
@@ -238,17 +286,33 @@ The benchmark will compare equivalent search workloads in `TreeMap` and a simple
 | Degenerate BST | O(n) | O(n) |
 | Unsorted list-backed Map | O(n) | O(n) |
 
-Benchmarks will use repeatable datasets, multiple runs, and both successful and unsuccessful lookups. **No speed advantage is claimed until measured.**
+Median-first insertion deliberately constructs a favorable shape; the BST
+does not rebalance itself. Measurements cover this implementation and workload,
+not a universal speed advantage or proof of asymptotic complexity.
+
+## Reproducible tree diagrams
+
+```python
+from bst_map.visualization import render_tree
+
+print(render_tree(tree.root))
+print(render_tree(tree.root, show_values=True))
+```
+
+The renderer labels left/right links, escapes labels to ASCII, and handles
+empty and deep trees without recursion. Checked-in diagrams show the seven-node
+example [before deletion](docs/diagrams/tree_before.txt) and
+[after deleting 30](docs/diagrams/tree_after.txt), using successor 40.
 
 ## Documentation
 
 Detailed planning and project evidence are maintained separately from this README:
 
-- [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — Days 1 and 2 tasks, quality gates, Git commit schedules, and remaining scope.
+- [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — Days 1–3 tasks, quality gates, Git commit schedules, and remaining scope.
 - [`docs/architecture.md`](docs/architecture.md) — module design and core interfaces.
-- `docs/performance_analysis.md` — benchmark methodology and findings *(planned)*.
+- [`docs/performance_analysis.md`](docs/performance_analysis.md) — executed benchmark methodology, results, and limits.
 - `docs/evaluation.pdf` — two-page evaluation of when tree data structures are beneficial *(planned)*.
-- `docs/diagrams/` — before-and-after tree diagrams *(planned)*.
+- [`docs/diagrams/`](docs/diagrams/) — reproducible before-and-after tree diagrams.
 
 ## Project knowledge graph
 
@@ -258,7 +322,9 @@ Graphify outputs are available in [`graphify-out/`](graphify-out/):
 - [`graph.json`](graphify-out/graph.json) — graph data with sources and confidence labels.
 - [`GRAPH_REPORT.md`](graphify-out/GRAPH_REPORT.md) — communities, cohesion, connections, and audit limitations.
 
-The graph is a snapshot of code and documentation, not a correctness proof.
+The checked-in graph is the **Day 2 snapshot**, before ListMap, the renderer,
+and the benchmark were implemented. It is not a current Day 3 architecture graph
+or a correctness proof; re-run graphify to refresh it.
 Graphify's token counters are unavailable here; no measured token cost is claimed.
 
 ## Completion criteria
@@ -267,7 +333,7 @@ The project is complete when BST operations preserve ordering; all traversals pr
 
 ## Future improvements
 
-Potential extensions include AVL or red-black balancing, breadth-first traversal, iterative algorithms, property-based tests, and additional benchmark comparisons.
+Potential extensions include AVL or red-black balancing, breadth-first traversal, property-based tests, and additional benchmark comparisons.
 
 ---
 
