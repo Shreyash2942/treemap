@@ -338,7 +338,7 @@ Project documentation and evidence:
 - [`docs/evaluation.md`](docs/evaluation.md) — editable evaluation source.
 - [`docs/evaluation_sources.md`](docs/evaluation_sources.md) - shared citation and report-editing notes.
 - [`docs/project_report.pdf`](docs/project_report.pdf) — expanded APA-style report covering implementation, evidence, and all success criteria.
-- [`docs/project_report.docx`](docs/project_report.docx) — editable Word report with no author name.
+- [`docs/project_report.docx`](docs/project_report.docx) — editable Word report with the saved title-page details.
 - [`docs/diagrams/`](docs/diagrams/) — reproducible before-and-after tree diagrams.
 
 ## Completion criteria

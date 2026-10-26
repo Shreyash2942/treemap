@@ -2,13 +2,14 @@
 
 The two-page evaluation and expanded report use third-person analytical prose,
 APA-style author/date citations, alphabetized references, and hanging indents.
-The expanded report omits the author name as requested; no student details,
-instructor name, or due date were invented.
+The expanded report retains the title and title-page details exactly as supplied
+in the edited Word document. Its PDF was exported from that saved document.
 
 ## Retained documents
 
 - [Two-page evaluation PDF](evaluation.pdf), rebuilt from [evaluation.md](evaluation.md).
-- [Expanded report PDF](project_report.pdf): 18 pages, including 10 main-body pages.
+- [Expanded report PDF](project_report.pdf): 18 pages, including 11 main-body pages
+  (pages 3–13).
 - [Editable expanded report](project_report.docx): open in a compatible Word processor,
   make changes, and export to PDF. Both figures are embedded in the document.
 
@@ -32,8 +33,8 @@ Primary sources were verified on October 25, 2026:
   describes a balanced, multiway B-tree, explicitly distinguished from this
   project's ordinary BST. Its undated reference uses `n.d.`.
 - APA's [Student Paper Setup Guide](https://apastyle.apa.org/instructional-aids/student-paper-setup-guide.pdf)
-  supplies the formatting conventions. Omitting unsupplied title-page details
-  is the requested adaptation for the expanded report.
+  supplies the formatting conventions. The expanded report's current title page
+  retains the details supplied through the Word edits.
 - The [versioned project repository](https://github.com/Shreyash2942/treemap/tree/v1.0.2)
   is cited as software in the expanded report, without a named author.
 
